@@ -36,7 +36,7 @@ else {
                         VALUES (?, ?)");
     $result->execute($data);
 
-//    header("Location: ../../App/index.php?msg=inserted");
+    header("Location: ../../App/index.php?msg=inserted");
 
 }
 
