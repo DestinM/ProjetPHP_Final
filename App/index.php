@@ -27,7 +27,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.php">
                 <img src="assets/img/logo_esih.png" alt="" width="230px"/>
             </a>
         </div>
@@ -90,7 +90,7 @@
                 </li>
 
                 <li class="">
-                    <a href="view/index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    <a href="index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                 </li>
                 <li>
                     <a href="view/inscription.php"><i class="fa fa-file-o" aria-hidden="true"></i> Inscription</a>
@@ -204,17 +204,17 @@
 
 
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <div class="jumbotron" style="text-align:center;">
                     <h2>Classe</h2>
 
                     <p>Afficher les classes</p>
-                    <a href="classe.html">
-                        <button type="button" class="btn btn-primary btn-lg" href="classe.html">Classe</button>
+                    <a href="view/classe.php">
+                        <button type="button" class="btn btn-primary btn-lg" href="view/classe.php">Classe</button>
                     </a>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <div class="jumbotron" style="text-align:center;">
                     <h2>Matiere</h2>
 
@@ -252,6 +252,17 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="jumbotron" style="text-align:center;">
+                    <h2>Domaine</h2>
+
+                    <p>Domaine</p>
+                    <a href="#">
+                        <button type="button" class="btn btn-primary btn-lg" href="#l">domaine</button>
+                    </a>
                 </div>
             </div>
         </div>
