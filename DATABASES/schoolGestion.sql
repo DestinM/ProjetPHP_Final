@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 12, 2017 at 11:15 
+-- Generation Time: Jun 13, 2017 at 01:21 
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -23,354 +23,313 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Domaine`
+-- Table structure for table `annee_academique`
 --
 
-CREATE TABLE `Domaine` (
+CREATE TABLE `annee_academique` (
+  `Annee_Academique` varchar(10) NOT NULL,
+  `Is_Actif` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `annee_academique`
+--
+
+INSERT INTO `annee_academique` (`Annee_Academique`, `Is_Actif`) VALUES
+('-', 0),
+('2000-2001', 0),
+('2001-2002', 0),
+('2010-2011', 1),
+('2012-2013', 1),
+('2014-2015', 0),
+('2015-2016', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `domaine`
+--
+
+CREATE TABLE `domaine` (
   `Code_Domaine` int(11) NOT NULL,
-  `Libelle_Domaine` varchar(50) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `Libelle_Domaine` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `domaine`
+--
+
+INSERT INTO `domaine` (`Code_Domaine`, `Libelle_Domaine`) VALUES
+(4, 'Gestion '),
+(5, 'Sciences Informatiques');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Etudiant`
+-- Table structure for table `etudiant`
 --
 
-CREATE TABLE `Etudiant` (
-  `Code_Etudiant, 50` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `nom, 50` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `prenom, 50` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `Sexe` char(255) COLLATE utf8_unicode_ci NOT NULL,
-  `Date_naissance` datetime NOT NULL,
-  `Email, 50` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `Vacation` text COLLATE utf8_unicode_ci NOT NULL,
-  `Classe` text COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `Etudiant_Niveau`
---
-
-CREATE TABLE `Etudiant_Niveau` (
-  `Code_Etudiant` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `Annee_Academique` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  `Code_Mention` int(11) NOT NULL,
-  `Code_Niveau` int(11) NOT NULL,
-  `Vacation_Code` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `Matiere`
---
-
-CREATE TABLE `Matiere` (
-  `Matiere_code, 50` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `Matiere_name, 50` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `Domaine` text COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `Matiere_enseigne`
---
-
-CREATE TABLE `Matiere_enseigne` (
-  `Code_Mention` int(11) NOT NULL,
-  `Code_Niveau` int(11) NOT NULL,
-  `Annee_Academique, 50` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `Code_Semestre` int(11) NOT NULL,
-  `Matiere_code, 50` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `Coefficient` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `Mention`
---
-
-CREATE TABLE `Mention` (
-  `Code_Mention` int(11) NOT NULL,
-  `Code_Domaine` int(11) NOT NULL,
-  `Libelle_Mention, 50` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `Mention_Niveau`
---
-
-CREATE TABLE `Mention_Niveau` (
-  `Code_Mention` int(11) NOT NULL,
-  `Code_Niveau` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `migrations`
---
-
-CREATE TABLE `migrations` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `batch` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `migrations`
---
-
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2017_01_17_100937_create_posts_table', 1),
-(4, '2017_05_24_015555_create_domaines_table', 1),
-(5, '2017_05_24_015623_create_niveaus_table', 1),
-(6, '2017_05_24_015632_create_mentions_table', 1),
-(7, '2017_05_24_015642_create_mention__niveaus_table', 1),
-(8, '2017_05_24_015656_create_matiere_enseignes_table', 1),
-(9, '2017_05_24_015701_create_matieres_table', 1),
-(10, '2017_05_24_015713_create_semestres_table', 1),
-(11, '2017_05_24_015730_create_etudiant__niveaus_table', 1),
-(12, '2017_05_24_015737_create_vacations_table', 1),
-(13, '2017_05_24_015748_create_anne__academiques_table', 1),
-(14, '2017_05_24_015756_create_etudiants_table', 1),
-(15, '2017_05_24_023347_create_note__etudiants_table', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `Niveau`
---
-
-CREATE TABLE `Niveau` (
-  `Code_Niveau` int(11) NOT NULL,
-  `Libelle_Niveau` varchar(50) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `Note_etudiant`
---
-
-CREATE TABLE `Note_etudiant` (
-  `Code_Mention` int(11) NOT NULL,
-  `Code_Niveau` int(11) NOT NULL,
-  `Annee_Academique, 10` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `Code_Semestre` int(11) NOT NULL,
-  `Matiere_code, 50` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `Code_etudiant, 50` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `Vacation_Code` int(11) NOT NULL,
-  `Intra` bigint(20) DEFAULT NULL,
-  `Finale` bigint(20) DEFAULT NULL,
-  `Note_finale` bigint(20) DEFAULT NULL,
-  `Matiere` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `Notes` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `id_etudiant` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `password_resets`
---
-
-CREATE TABLE `password_resets` (
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `patient`
---
-
-CREATE TABLE `patient` (
-  `id` int(11) NOT NULL,
-  `nom` varchar(45) DEFAULT NULL,
-  `prenom` varchar(45) DEFAULT NULL,
-  `create_date` datetime DEFAULT NULL,
-  `update_date` datetime DEFAULT NULL,
-  `code_patient` varchar(45) DEFAULT NULL,
-  `sexe` varchar(45) DEFAULT NULL,
-  `phone` varchar(45) DEFAULT NULL,
-  `maladie` longtext,
-  `commentaires` longtext,
-  `email` varchar(45) DEFAULT NULL,
-  `date_rendezvous` datetime DEFAULT NULL
+CREATE TABLE `etudiant` (
+  `Code_Etudiant` varchar(50) NOT NULL,
+  `Nom` varchar(50) NOT NULL,
+  `Prenom` varchar(100) NOT NULL,
+  `Sexe` char(1) NOT NULL,
+  `Date_Naiss` datetime NOT NULL,
+  `Email` varchar(100) NOT NULL,
+  `vacation` varchar(255) NOT NULL,
+  `classe` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `posts`
+-- Table structure for table `etudiant_niveau`
 --
 
-CREATE TABLE `posts` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `content` text COLLATE utf8_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `posts`
---
-
-INSERT INTO `posts` (`id`, `name`, `content`, `created_at`, `updated_at`) VALUES
-(1, 'jean mike Luigi', 'je me demande si je ne peux pas mettre n''importe quoi.', '2017-05-24 08:48:35', '2017-05-24 08:48:35'),
-(2, 'test-0', 'contenue 0', '2017-05-24 08:48:36', '2017-05-24 08:48:36'),
-(3, 'test-1', 'contenue 1', '2017-05-24 08:48:36', '2017-05-24 08:48:36'),
-(4, 'test-2', 'contenue 2', '2017-05-24 08:48:36', '2017-05-24 08:48:36'),
-(5, 'test-3', 'contenue 3', '2017-05-24 08:48:36', '2017-05-24 08:48:36'),
-(6, 'test-4', 'contenue 4', '2017-05-24 08:48:36', '2017-05-24 08:48:36'),
-(7, 'test-5', 'contenue 5', '2017-05-24 08:48:36', '2017-05-24 08:48:36'),
-(8, 'test-6', 'contenue 6', '2017-05-24 08:48:36', '2017-05-24 08:48:36'),
-(9, 'test-7', 'contenue 7', '2017-05-24 08:48:36', '2017-05-24 08:48:36'),
-(10, 'test-8', 'contenue 8', '2017-05-24 08:48:36', '2017-05-24 08:48:36'),
-(11, 'test-9', 'contenue 9', '2017-05-24 08:48:36', '2017-05-24 08:48:36');
+CREATE TABLE `etudiant_niveau` (
+  `Code_Etudiant` varchar(50) NOT NULL,
+  `Annee_Academique` varchar(10) NOT NULL,
+  `Code_Mention` int(11) NOT NULL,
+  `Code_Niveau` int(11) NOT NULL,
+  `Vacation_Code` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Semestre`
+-- Table structure for table `etudiant_note`
 --
 
-CREATE TABLE `Semestre` (
+CREATE TABLE `etudiant_note` (
+  `id_etudiant` int(11) NOT NULL,
+  `matiere` varchar(255) NOT NULL,
+  `note` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `matiere`
+--
+
+CREATE TABLE `matiere` (
+  `Matiere_Code` varchar(50) NOT NULL,
+  `Matiere_Name` varchar(50) NOT NULL,
+  `domaine` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `matiere_enseigne`
+--
+
+CREATE TABLE `matiere_enseigne` (
+  `Code_Mention` int(11) NOT NULL,
+  `Code_Niveau` int(11) NOT NULL,
+  `Annee_Academique` varchar(10) NOT NULL,
   `Code_Semestre` int(11) NOT NULL,
-  `Semestre_Libelle` varchar(50) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `Matiere_Code` varchar(50) NOT NULL,
+  `Coefficient` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Table structure for table `mention`
 --
 
-CREATE TABLE `users` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `mention` (
+  `Code_Mention` int(11) NOT NULL,
+  `Code_Domaine` int(11) NOT NULL,
+  `Libelle_Mention` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mention`
+--
+
+INSERT INTO `mention` (`Code_Mention`, `Code_Domaine`, `Libelle_Mention`) VALUES
+(1, 4, 'Gestion A'),
+(12, 4, 'Gestion D'),
+(14, 4, 'Gestion K'),
+(15, 4, 'aaaaaa'),
+(16, 4, 'Ok');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Vacation`
+-- Table structure for table `mention_niveau`
 --
 
-CREATE TABLE `Vacation` (
+CREATE TABLE `mention_niveau` (
+  `Code_Mention` int(11) NOT NULL,
+  `Code_Niveau` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `niveau`
+--
+
+CREATE TABLE `niveau` (
+  `Code_Niveau` int(11) NOT NULL,
+  `Libelle_Niveau` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `niveau`
+--
+
+INSERT INTO `niveau` (`Code_Niveau`, `Libelle_Niveau`) VALUES
+(2, 'L1'),
+(3, 'L2');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `note_etudiant`
+--
+
+CREATE TABLE `note_etudiant` (
+  `Code_Mention` int(11) NOT NULL,
+  `Code_Niveau` int(11) NOT NULL,
+  `Annee_Academique` varchar(10) NOT NULL,
+  `Code_Semestre` int(11) NOT NULL,
+  `Matiere_Code` varchar(50) NOT NULL,
+  `Code_Etudiant` varchar(50) NOT NULL,
+  `Intra` bigint(20) NOT NULL,
+  `Final` bigint(20) NOT NULL,
+  `Note_Finale` bigint(20) NOT NULL,
+  `Vacation_Code` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `semestre`
+--
+
+CREATE TABLE `semestre` (
+  `Code_Semestre` int(11) NOT NULL,
+  `Semestre_Libelle` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vacation`
+--
+
+CREATE TABLE `vacation` (
   `Vacation_Code` int(11) NOT NULL,
-  `Vacation_Libelle, 50` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `Vacation_Libelle` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `Domaine`
+-- Indexes for table `annee_academique`
 --
-ALTER TABLE `Domaine`
+ALTER TABLE `annee_academique`
+  ADD PRIMARY KEY (`Annee_Academique`),
+  ADD KEY `Annee_Academique` (`Annee_Academique`);
+
+--
+-- Indexes for table `domaine`
+--
+ALTER TABLE `domaine`
   ADD PRIMARY KEY (`Code_Domaine`);
 
 --
--- Indexes for table `Etudiant`
+-- Indexes for table `etudiant`
 --
-ALTER TABLE `Etudiant`
-  ADD PRIMARY KEY (`Code_Etudiant, 50`);
+ALTER TABLE `etudiant`
+  ADD PRIMARY KEY (`Code_Etudiant`);
 
 --
--- Indexes for table `Matiere`
+-- Indexes for table `etudiant_niveau`
 --
-ALTER TABLE `Matiere`
-  ADD PRIMARY KEY (`Matiere_code, 50`);
+ALTER TABLE `etudiant_niveau`
+  ADD PRIMARY KEY (`Code_Etudiant`,`Annee_Academique`,`Code_Mention`,`Code_Niveau`,`Vacation_Code`),
+  ADD KEY `Vacation_Code` (`Vacation_Code`),
+  ADD KEY `Annee_Academique` (`Annee_Academique`),
+  ADD KEY `Code_Mention` (`Code_Mention`),
+  ADD KEY `Code_Niveau` (`Code_Niveau`),
+  ADD KEY `Code_Mention_2` (`Code_Mention`,`Code_Niveau`);
 
 --
--- Indexes for table `Mention`
+-- Indexes for table `etudiant_note`
 --
-ALTER TABLE `Mention`
-  ADD PRIMARY KEY (`Code_Mention`),
-  ADD KEY `mention_code_domaine_foreign` (`Code_Domaine`);
-
---
--- Indexes for table `Mention_Niveau`
---
-ALTER TABLE `Mention_Niveau`
-  ADD KEY `mention_niveau_code_mention_foreign` (`Code_Mention`),
-  ADD KEY `mention_niveau_code_niveau_foreign` (`Code_Niveau`);
-
---
--- Indexes for table `migrations`
---
-ALTER TABLE `migrations`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `Niveau`
---
-ALTER TABLE `Niveau`
-  ADD PRIMARY KEY (`Code_Niveau`);
-
---
--- Indexes for table `Note_etudiant`
---
-ALTER TABLE `Note_etudiant`
+ALTER TABLE `etudiant_note`
   ADD PRIMARY KEY (`id_etudiant`);
 
 --
--- Indexes for table `password_resets`
+-- Indexes for table `matiere`
 --
-ALTER TABLE `password_resets`
-  ADD KEY `password_resets_email_index` (`email`),
-  ADD KEY `password_resets_token_index` (`token`);
+ALTER TABLE `matiere`
+  ADD PRIMARY KEY (`Matiere_Code`);
 
 --
--- Indexes for table `patient`
+-- Indexes for table `matiere_enseigne`
 --
-ALTER TABLE `patient`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `code_patient_UNIQUE` (`code_patient`);
+ALTER TABLE `matiere_enseigne`
+  ADD PRIMARY KEY (`Code_Mention`,`Code_Niveau`,`Annee_Academique`,`Code_Semestre`,`Matiere_Code`),
+  ADD KEY `Matiere_Code` (`Matiere_Code`),
+  ADD KEY `Code_Semestre` (`Code_Semestre`),
+  ADD KEY `Annee_Academique` (`Annee_Academique`),
+  ADD KEY `Code_Mention` (`Code_Mention`),
+  ADD KEY `Code_Niveau` (`Code_Niveau`);
 
 --
--- Indexes for table `posts`
+-- Indexes for table `mention`
 --
-ALTER TABLE `posts`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `mention`
+  ADD PRIMARY KEY (`Code_Mention`),
+  ADD KEY `Code_Domaine` (`Code_Domaine`),
+  ADD KEY `Code_Mention` (`Code_Mention`);
 
 --
--- Indexes for table `Semestre`
+-- Indexes for table `mention_niveau`
 --
-ALTER TABLE `Semestre`
+ALTER TABLE `mention_niveau`
+  ADD PRIMARY KEY (`Code_Mention`,`Code_Niveau`),
+  ADD KEY `Code_Niveau` (`Code_Niveau`),
+  ADD KEY `Code_Mention` (`Code_Mention`);
+
+--
+-- Indexes for table `niveau`
+--
+ALTER TABLE `niveau`
+  ADD PRIMARY KEY (`Code_Niveau`),
+  ADD KEY `Code_Niveau` (`Code_Niveau`);
+
+--
+-- Indexes for table `note_etudiant`
+--
+ALTER TABLE `note_etudiant`
+  ADD PRIMARY KEY (`Code_Mention`,`Code_Niveau`,`Annee_Academique`,`Code_Semestre`,`Matiere_Code`,`Code_Etudiant`,`Vacation_Code`),
+  ADD KEY `Code_Mention` (`Code_Mention`),
+  ADD KEY `Code_Niveau` (`Code_Niveau`),
+  ADD KEY `Annee_Academique` (`Annee_Academique`),
+  ADD KEY `Code_Semestre` (`Code_Semestre`),
+  ADD KEY `Matiere_Code` (`Matiere_Code`),
+  ADD KEY `Code_Etudiant` (`Code_Etudiant`),
+  ADD KEY `Vacation_Code` (`Vacation_Code`);
+
+--
+-- Indexes for table `semestre`
+--
+ALTER TABLE `semestre`
   ADD PRIMARY KEY (`Code_Semestre`);
 
 --
--- Indexes for table `users`
+-- Indexes for table `vacation`
 --
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `users_email_unique` (`email`);
-
---
--- Indexes for table `Vacation`
---
-ALTER TABLE `Vacation`
+ALTER TABLE `vacation`
   ADD PRIMARY KEY (`Vacation_Code`);
 
 --
@@ -378,41 +337,77 @@ ALTER TABLE `Vacation`
 --
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT for table `domaine`
 --
-ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+ALTER TABLE `domaine`
+  MODIFY `Code_Domaine` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT for table `Note_etudiant`
+-- AUTO_INCREMENT for table `etudiant_note`
 --
-ALTER TABLE `Note_etudiant`
+ALTER TABLE `etudiant_note`
   MODIFY `id_etudiant` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `posts`
+-- AUTO_INCREMENT for table `mention`
 --
-ALTER TABLE `posts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+ALTER TABLE `mention`
+  MODIFY `Code_Mention` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT for table `niveau`
 --
-ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `niveau`
+  MODIFY `Code_Niveau` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `semestre`
+--
+ALTER TABLE `semestre`
+  MODIFY `Code_Semestre` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `vacation`
+--
+ALTER TABLE `vacation`
+  MODIFY `Vacation_Code` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `Mention`
+-- Constraints for table `etudiant_niveau`
 --
-ALTER TABLE `Mention`
-  ADD CONSTRAINT `mention_code_domaine_foreign` FOREIGN KEY (`Code_Domaine`) REFERENCES `Domaine` (`Code_Domaine`);
+ALTER TABLE `etudiant_niveau`
+  ADD CONSTRAINT `etudiant_niveau_ibfk_1` FOREIGN KEY (`Vacation_Code`) REFERENCES `vacation` (`Vacation_Code`),
+  ADD CONSTRAINT `etudiant_niveau_ibfk_2` FOREIGN KEY (`Annee_Academique`) REFERENCES `annee_academique` (`Annee_Academique`),
+  ADD CONSTRAINT `etudiant_niveau_ibfk_3` FOREIGN KEY (`Code_Etudiant`) REFERENCES `etudiant` (`Code_Etudiant`);
 
 --
--- Constraints for table `Mention_Niveau`
+-- Constraints for table `matiere_enseigne`
 --
-ALTER TABLE `Mention_Niveau`
-  ADD CONSTRAINT `mention_niveau_code_mention_foreign` FOREIGN KEY (`Code_Mention`) REFERENCES `Mention` (`Code_Mention`),
-  ADD CONSTRAINT `mention_niveau_code_niveau_foreign` FOREIGN KEY (`Code_Niveau`) REFERENCES `Niveau` (`Code_Niveau`);
+ALTER TABLE `matiere_enseigne`
+  ADD CONSTRAINT `matiere_enseigne_ibfk_1` FOREIGN KEY (`Matiere_Code`) REFERENCES `matiere` (`Matiere_Code`),
+  ADD CONSTRAINT `matiere_enseigne_ibfk_2` FOREIGN KEY (`Code_Semestre`) REFERENCES `semestre` (`Code_Semestre`),
+  ADD CONSTRAINT `matiere_enseigne_ibfk_3` FOREIGN KEY (`Annee_Academique`) REFERENCES `annee_academique` (`Annee_Academique`),
+  ADD CONSTRAINT `matiere_enseigne_ibfk_4` FOREIGN KEY (`Code_Mention`,`Code_Niveau`) REFERENCES `mention_niveau` (`Code_Mention`, `Code_Niveau`);
+
+--
+-- Constraints for table `mention`
+--
+ALTER TABLE `mention`
+  ADD CONSTRAINT `mention_ibfk_1` FOREIGN KEY (`Code_Domaine`) REFERENCES `domaine` (`Code_Domaine`);
+
+--
+-- Constraints for table `mention_niveau`
+--
+ALTER TABLE `mention_niveau`
+  ADD CONSTRAINT `mention_niveau_ibfk_1` FOREIGN KEY (`Code_Niveau`) REFERENCES `niveau` (`Code_Niveau`),
+  ADD CONSTRAINT `mention_niveau_ibfk_2` FOREIGN KEY (`Code_Mention`) REFERENCES `mention` (`Code_Mention`);
+
+--
+-- Constraints for table `note_etudiant`
+--
+ALTER TABLE `note_etudiant`
+  ADD CONSTRAINT `note_etudiant_ibfk_1` FOREIGN KEY (`Code_Mention`,`Code_Niveau`,`Annee_Academique`,`Code_Semestre`,`Matiere_Code`) REFERENCES `matiere_enseigne` (`Code_Mention`, `Code_Niveau`, `Annee_Academique`, `Code_Semestre`, `Matiere_Code`),
+  ADD CONSTRAINT `note_etudiant_ibfk_2` FOREIGN KEY (`Code_Etudiant`) REFERENCES `etudiant_niveau` (`Code_Etudiant`),
+  ADD CONSTRAINT `note_etudiant_ibfk_3` FOREIGN KEY (`Vacation_Code`) REFERENCES `etudiant_niveau` (`Vacation_Code`),
+  ADD CONSTRAINT `note_etudiant_ibfk_4` FOREIGN KEY (`Code_Mention`,`Code_Niveau`) REFERENCES `etudiant_niveau` (`Code_Mention`, `Code_Niveau`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

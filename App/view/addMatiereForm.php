@@ -1,5 +1,5 @@
 
-                  <form action="../contoller/addMatiere">
+                  <form action="../controller/addMatiere">
 
                       <div class="form-group">
                         <label for="code_matiere">Code Matiere</label>
@@ -17,5 +17,4 @@
                               <option>L1</option>
                             </select>
                         </div>
-                       <button type="button" class="btn btn-primary btn-lg" >Envoyer</button>
                     </form> 
