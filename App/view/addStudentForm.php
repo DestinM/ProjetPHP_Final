@@ -1,4 +1,4 @@
-<form role="form" method="post" action="../controller/addStudient.php">
+<form id="form" role="form" method="post" action="controller/addStudent.php">
     <div class="form-group">
         <label>code</label>
         <input name="code" id="code" type="text" class="form-control" placeholder="code">
@@ -24,7 +24,7 @@
     </div>
     <div class="form-group">
         <label>email</label>
-        <input name="dateNaissance" id="date" type="email" class="form-control" placeholder="">
+        <input name="email" id="email" type="text" class="form-control" placeholder="">
     </div>
     <div class="form-group">
         <label>vacation</label>
