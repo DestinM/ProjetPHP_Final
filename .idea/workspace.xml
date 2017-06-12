@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da2449d1-f390-4585-8641-6b2b70ffba12" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/view/addStudentForm.php" afterPath="$PROJECT_DIR$/App/view/addStudentForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="da2449d1-f390-4585-8641-6b2b70ffba12" name="Default" comment="" />
     <ignored path="ProjetPHP_Final.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -45,11 +42,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addStudentForm.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="addStudentForm.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/view/addStudentForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7226027">
+            <state vertical-scroll-proportion="-15.62963">
               <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addMatiere.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/App/controller/addMatiere.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.061643835">
+              <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -78,6 +85,7 @@
         <option value="$PROJECT_DIR$/App/controller/addMatiereForm.php" />
         <option value="$PROJECT_DIR$/App/index.php" />
         <option value="$PROJECT_DIR$/App/view/addStudentForm.php" />
+        <option value="$PROJECT_DIR$/App/controller/addMatiere.php" />
       </list>
     </option>
   </component>
@@ -231,7 +239,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="addStud&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/view/addStudentForm.php&#10;index.php&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/index.php&#10;index&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/index.php&#10;mod&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/model/model.php" />
+    <property name="SearchEverywhereHistoryKey" value="addmati&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/addMatiere.php&#10;addStud&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/view/addStudentForm.php&#10;index.php&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/index.php&#10;index&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/index.php&#10;mod&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/model/model.php" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -363,8 +371,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/view/addStudentForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7226027">
+        <state vertical-scroll-proportion="-15.62963">
           <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/controller/addMatiere.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.061643835">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
           <folding />
         </state>
       </provider>
