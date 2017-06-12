@@ -1,12 +1,12 @@
 <?php
-//class access bdd
-abstract class Modele {
+
+class Database {
 
   // Objet PDO d'accès à la BD
   private $bdd;
 
   // Exécute une requête SQL éventuellement paramétrée
-  protected function executerRequete($sql, $params = null) {
+  public function query($sql, $params = null) {
     if ($params == null) {
       $resultat = $this->getBdd()->query($sql);    // exécution directe
     }
@@ -18,12 +18,23 @@ abstract class Modele {
   }
 
   // Renvoie un objet de connexion à la BD en initialisant la connexion au besoin
-  private function getBdd() {
+  function connect() {
     if ($this->bdd == null) {
       // Création de la connexion
-      $this->bdd = new PDO('mysql:host=localhost;dbname=schoolGestion;charset=utf8',
-        'root', 'secret', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        try{
+            $this->bdd = new PDO('mysql:host=localhost;dbname=schoolGestion','root','secret');
+            $this->bdd->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
+            $this->bdd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
+            echo 'Connexion reussie';
+        }catch(PDOException $e){
+            echo 'Connexion impossible';
+        }
     }
     return $this->bdd;
   }
 }
+
+
+
+
+?>

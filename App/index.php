@@ -169,7 +169,9 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    <a href="controller/addStudient.php">
+                                        <button type="submit" class="btn btn-primary" href="controller/addStudent">Save changes</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
