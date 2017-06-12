@@ -36,12 +36,7 @@
         <ul class="nav navbar-top-links navbar-right">
             <!-- main dropdown -->
 
-            <!-- <i class="fa fa-search" aria-hidden="true" style="color:white;font-size:3em"></i> -->
-            <li class="dropdown">
-                <input type="text" class=""
-                       style="width:200px;height:40px;padding-top:12px;font-size:1.2em;border-radius:6px;" id="searchP"
-                       placeholder="Search....."/>
-            </li>
+            
 
 
             <li class="dropdown">
@@ -73,22 +68,6 @@
         <div class="sidebar-collapse">
             <!-- side-menu -->
             <ul class="nav" id="side-menu">
-                <li>
-                    <!-- user image section-->
-                    <div class="user-section">
-                        <div class="user-section-inner">
-                            <img src="assets/img/user.jpg" alt="">
-                        </div>
-                        <div class="user-info">
-                            <div>Wil<strong>Simpreux</strong></div>
-                            <div class="user-text-online">
-                                <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online
-                            </div>
-                        </div>
-                    </div>
-                    <!--end user image section-->
-                </li>
-
                 <li class="">
                     <a href="index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                 </li>
