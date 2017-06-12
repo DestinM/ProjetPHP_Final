@@ -90,14 +90,14 @@
                 </li>
 
                 <li class="">
-                    <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    <a href="view/index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                 </li>
                 <li>
-                    <a href="inscription.html"><i class="fa fa-file-o" aria-hidden="true"></i> Inscription</a>
+                    <a href="view/inscription.php"><i class="fa fa-file-o" aria-hidden="true"></i> Inscription</a>
                 </li>
 
                 <li>
-                    <a href="bulletin.html"><i class="fa fa-file-text-o" aria-hidden="true"></i> Creer un bulletin</a>
+                    <a href="view/bulletin.php"><i class="fa fa-file-text-o" aria-hidden="true"></i> Creer un bulletin</a>
                 </li>
 
                 <li>
@@ -105,14 +105,14 @@
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="academique.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Anne
+                            <a href="view/academique.php"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Anne
                                 Academique</a>
                         </li>
                         <li>
-                            <a href="classe.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Classe</a>
+                            <a href="classe.php"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Classe</a>
                         </li>
                         <li>
-                            <a href="matiere.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Matiere</a>
+                            <a href="view/matiere.php"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Matiere</a>
                         </li>
                     </ul>
                     <!-- second-level-items -->
@@ -224,8 +224,8 @@
                                 class="btn btn-primary btn-lg" href="#"><i class="fa fa-plus" aria-hidden="true"></i>ajouter
                         </button>
                     </a>
-                    <a href="matiere.html">
-                        <button type="button" class="btn btn-primary btn-lg" href="matiere.html">lister</button>
+                    <a href="view/matiere.php">
+                        <button type="button" class="btn btn-primary btn-lg" href="view/matiere.php">lister</button>
                     </a>
                     <!-- modal d'inscription -->
                     <div class="modal fade" id="addMatiereModal" tabindex="-1" role="dialog"
