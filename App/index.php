@@ -135,16 +135,23 @@
         <div class="row">
             <div class="col-sm-4">
                 <div class="jumbotron" style="text-align:center;">
-                    <h2>Incription</h2>
+                    <h2>Etudiant</h2>
 
-                    <p>Inscrire un etudiant</p>
+                    <p>gerer etudiant</p>
                     <a href="#">
-                        <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg">
+                        <button type="button" data-toggle="modal" data-target="#addStudentModal"
+                                class="btn btn-primary btn-lg"><i class="fa fa-plus" aria-hidden="true"></i>
                             Inscrire
                         </button>
                     </a>
+                    <a href="#">
+                        <button type="button" class="btn btn-primary btn-lg">
+                            lister
+                        </button>
+                    </a>
                     <!-- modal d'inscription -->
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    <div class="modal fade" id="addStudentModal" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel"
                          aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -156,31 +163,7 @@
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <form role="form">
-                                                <div class="form-group">
-                                                    <label>nom</label>
-                                                    <input type="text" class="form-control" placeholder="nom">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>prenom</label>
-                                                    <input type="text" class="form-control" placeholder="prenom">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>sexe</label>
-                                                    <select>
-                                                        <option>masculing</option>
-                                                        <option>feminin</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Date de naissance</label>
-                                                    <input type="datetime" class="form-control" placeholder="">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>email</label>
-                                                    <input type="email" class="form-control" placeholder="">
-                                                </div>
-                                            </form>
+                                            <?php require("view/addStudentForm.php"); ?>
                                         </div>
                                     </div>
                                 </div>
@@ -197,58 +180,13 @@
                 <div class="jumbotron" style="text-align:center;">
                     <h2>Bulletin</h2>
 
-                    <p>creer un bulletin</p>
+                    <p>generer bulletin pour les eleves</p>
                     <a href="#">
-                        <button type="button" data-toggle="modal" data-target="#newBulletinModal"
+                        <button type="button" data-toggle="modal"
                                 class="btn btn-primary btn-lg"
-                                href="#"><i class="fa fa-plus" aria-hidden="true"></i> Bulletin
+                                href="#"> Bulletin
                         </button>
                     </a>
-                    <!-- modal d'inscription pour bullentin -->
-                    <div class="modal fade" id="newBulletinModal" tabindex="-1" role="dialog"
-                         aria-labelledby="myModalLabel"
-                         aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"
-                                            aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title" id="myModalLabel">creer un bulletin</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <form role="form">
-                                        <div class="form-group">
-                                            <label>nom</label>
-                                            <input type="text" class="form-control" placeholder="nom">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>prenom</label>
-                                            <input type="text" class="form-control" placeholder="prenom">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>sexe</label>
-                                            <select>
-                                                <option>masculing</option>
-                                                <option>feminin</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Date de naissance</label>
-                                            <input type="datetime" class="form-control" placeholder="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>email</label>
-                                            <input type="email" class="form-control" placeholder="">
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="col-sm-4">
@@ -280,10 +218,40 @@
                 <div class="jumbotron" style="text-align:center;">
                     <h2>Matiere</h2>
 
-                    <p>liste des matieres</p>
-                    <a href="matiere.html">
-                        <button type="button" class="btn btn-primary btn-lg" href="matiere.html">Matiere</button>
+                    <p>gerer les matieres</p>
+                    <a href="#">
+                        <button type="button" data-toggle="modal" data-target="#addMatiereModal"
+                                class="btn btn-primary btn-lg" href="#"><i class="fa fa-plus" aria-hidden="true"></i>ajouter
+                        </button>
                     </a>
+                    <a href="matiere.html">
+                        <button type="button" class="btn btn-primary btn-lg" href="matiere.html">lister</button>
+                    </a>
+                    <!-- modal d'inscription -->
+                    <div class="modal fade" id="addMatiereModal" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title" id="myModalLabel">Ajouter une matiere</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <?php require("view/addMatiereForm.php"); ?>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
