@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da2449d1-f390-4585-8641-6b2b70ffba12" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/controller/addStudent.php" afterPath="$PROJECT_DIR$/App/controller/addStudent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/controller/addMatiere.php" afterPath="$PROJECT_DIR$/App/controller/addMatiere.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/view/addMatiereForm.php" afterPath="$PROJECT_DIR$/App/view/addMatiereForm.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/index.php" afterPath="$PROJECT_DIR$/App/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ProjetPHP_Final.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7089041">
-              <caret line="243" column="9" selection-start-line="243" selection-start-column="9" selection-end-line="243" selection-end-column="9" />
+            <state vertical-scroll-proportion="-16.0">
+              <caret line="203" column="84" selection-start-line="203" selection-start-column="84" selection-end-line="203" selection-end-column="84" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -70,8 +70,8 @@
       <file leaf-file-name="addStudent.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/controller/addStudent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.666666">
-              <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
                 <marker date="1497306968729" expanded="true" signature="1064:1194" placeholder="insert into ..." />
               </folding>
@@ -79,13 +79,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addMatiere.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="addMatiere.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/controller/addMatiere.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7705479">
+              <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
               <folding>
                 <element signature="e#6#102#0#PHP" expanded="true" />
+                <marker date="1497309048589" expanded="true" signature="772:853" placeholder="insert into ..." />
               </folding>
             </state>
           </provider>
@@ -94,8 +95,8 @@
       <file leaf-file-name="addMatiereForm.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/view/addMatiereForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="58" selection-start-line="0" selection-start-column="58" selection-end-line="0" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -136,7 +137,6 @@
       <list>
         <option value="$PROJECT_DIR$/../themesview/Moise/Moy_Template/bs-siminta-admin/forms.html" />
         <option value="$PROJECT_DIR$/App/controller/addMatiereForm.php" />
-        <option value="$PROJECT_DIR$/App/controller/addMatiere.php" />
         <option value="$PROJECT_DIR$/App/controller/seedDatabase.php" />
         <option value="$PROJECT_DIR$/App/model/model.php" />
         <option value="$PROJECT_DIR$/App/model/database.php" />
@@ -145,6 +145,8 @@
         <option value="$PROJECT_DIR$/App/model/Database.php" />
         <option value="$PROJECT_DIR$/App/controller/addStudent.php" />
         <option value="$PROJECT_DIR$/App/index.php" />
+        <option value="$PROJECT_DIR$/App/view/addMatiereForm.php" />
+        <option value="$PROJECT_DIR$/App/controller/addMatiere.php" />
       </list>
     </option>
   </component>
@@ -316,7 +318,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/index.php&#10;data&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/model/Database.php&#10;mod&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/model/model.php&#10;database.php&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/model/database.php&#10;addM&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/addMatiere.php&#10;add&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/addStudient.php&#10;seeDa&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/seedDatabase.php&#10;addmati&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/addMatiere.php&#10;addStud&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/view/addStudentForm.php&#10;index.php&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/index.php" />
+    <property name="SearchEverywhereHistoryKey" value="mati&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/view/addMatiereForm.php&#10;adds&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/addStudent.php&#10;addm&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/addMatiere.php&#10;index&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/index.php&#10;data&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/model/Database.php&#10;mod&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/model/model.php&#10;database.php&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/model/database.php&#10;addM&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/addMatiere.php&#10;add&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/addStudient.php&#10;seeDa&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/seedDatabase.php&#10;addmati&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/addMatiere.php&#10;addStud&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/view/addStudentForm.php&#10;index.php&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/index.php" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -446,6 +448,7 @@
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#6#102#0#PHP" expanded="true" />
+            <marker date="1497309048589" expanded="true" signature="772:853" placeholder="insert into ..." />
           </folding>
         </state>
       </provider>
@@ -509,6 +512,7 @@
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#6#102#0#PHP" expanded="true" />
+            <marker date="1497309048589" expanded="true" signature="772:853" placeholder="insert into ..." />
           </folding>
         </state>
       </provider>
@@ -572,6 +576,7 @@
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
             <element signature="e#6#102#0#PHP" expanded="true" />
+            <marker date="1497309048589" expanded="true" signature="772:853" placeholder="insert into ..." />
           </folding>
         </state>
       </provider>
@@ -679,24 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/view/addMatiereForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/controller/addMatiere.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#102#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/model/model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6746167">
@@ -737,23 +724,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/controller/addStudent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.666666">
-          <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <marker date="1497306968729" expanded="true" signature="1064:1194" placeholder="insert into ..." />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/App/view/addMatiereForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="58" selection-start-line="0" selection-start-column="58" selection-end-line="0" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/App/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7089041">
-          <caret line="243" column="9" selection-start-line="243" selection-start-column="9" selection-end-line="243" selection-end-column="9" />
+        <state vertical-scroll-proportion="-16.0">
+          <caret line="203" column="84" selection-start-line="203" selection-start-column="84" selection-end-line="203" selection-end-column="84" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/controller/addMatiere.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7705479">
+          <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
+          <folding>
+            <element signature="e#6#102#0#PHP" expanded="true" />
+            <marker date="1497309048589" expanded="true" signature="772:853" placeholder="insert into ..." />
           </folding>
         </state>
       </provider>

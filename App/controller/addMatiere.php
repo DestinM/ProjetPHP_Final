@@ -8,34 +8,10 @@
 */
 
 require_once("../model/Database.php");
-
-if (isset($_POST['button'])) {
-
-
-
 $erreur = false;
-if (isset(htmlspecialchars($_POST['code_matiere'])) {
-   $code_matiere = $_POST['code_matiere'];
-} else {
-    $code_matiere = "";
-//    $erreur = true;
-}
 
-if (isset(htmlspecialchars($_POST['matiere'])) {
-   $matiere = $_POST['matiere'];
-} else {
-    $matiere = "";
-//    $erreur = true;
-}
-
-if (isset(htmlspecialchars($_POST['domaine'])) {
-    $domaine = $_POST['domaine'];
-} else {
-    $domaine = "";
-//    $erreur = true;
-}
-
-
+$matiere = $_POST['matiere'];
+$domaine = $_POST['domaine'];
 
 //echo $erreur;
 // On vérifie si les champs sont vides
@@ -44,16 +20,26 @@ if (false) {
 } // Aucun champ n'est vide, on peut enregistrer dans la table
 else {
     //Connexion a la basse de donnée.
-//    $data = new Array();
+    echo "matiere:" . $matiere;
+    $data = array();
+
+    $data[0] = $matiere;
+    $data[1] = $domaine;
+
+    echo "<pre>";
+    print_r($data);
+    echo "</pre>";
+
     $database = new Database();
     $connection = $database->connect();
-   $result = $connection->query("insert into matiere (Matiere_code, Matiere_name, domaine)
-                       VALUES ('$code_matiere', '$matiere', '$domaine')");
-   $result->execute();
+    $result = $connection->prepare("insert into matiere (Matiere_Name, domaine)
+                        VALUES (?, ?)");
+    $result->execute($data);
+
+//    header("Location: ../../App/index.php?msg=inserted");
 
 }
 
-}
 ?>
 
 		
