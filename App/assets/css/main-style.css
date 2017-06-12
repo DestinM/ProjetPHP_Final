@@ -61,6 +61,7 @@ padding: 20px 15px;
 }
 #side-menu {
     background-color:#04B173;
+    padding-top: 25px;
 }
 
  #side-menu a {
@@ -93,6 +94,7 @@ padding: 20px 15px;
 
 #navbar {
     background-color:rgb(83, 163, 163);
+    padding-bottom: 30px;
 }
 
 .navbar-brand {

@@ -27,42 +27,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.php">
                 <img src="assets/img/logo_esih.png" alt="" width="230px"/>
             </a>
         </div>
         <!-- end navbar-header -->
-        <!-- navbar-top-links -->
-        <ul class="nav navbar-top-links navbar-right">
-            <!-- main dropdown -->
-
-            <!-- <i class="fa fa-search" aria-hidden="true" style="color:white;font-size:3em"></i> -->
-            <li class="dropdown">
-                <input type="text" class=""
-                       style="width:200px;height:40px;padding-top:12px;font-size:1.2em;border-radius:6px;" id="searchP"
-                       placeholder="Search....."/>
-            </li>
-
-
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user fa-3x"></i>
-                </a>
-                <!-- dropdown user-->
-                <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
-                    </li>
-                </ul>
-                <!-- end dropdown-user -->
-            </li>
-            <!-- end main dropdown -->
-        </ul>
-        <!-- end navbar-top-links -->
+       
 
     </nav>
     <!-- end navbar top -->
@@ -73,24 +43,8 @@
         <div class="sidebar-collapse">
             <!-- side-menu -->
             <ul class="nav" id="side-menu">
-                <li>
-                    <!-- user image section-->
-                    <div class="user-section">
-                        <div class="user-section-inner">
-                            <img src="assets/img/user.jpg" alt="">
-                        </div>
-                        <div class="user-info">
-                            <div>Wil<strong>Simpreux</strong></div>
-                            <div class="user-text-online">
-                                <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online
-                            </div>
-                        </div>
-                    </div>
-                    <!--end user image section-->
-                </li>
-
                 <li class="">
-                    <a href="view/index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    <a href="index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                 </li>
                 <li>
                     <a href="view/inscription.php"><i class="fa fa-file-o" aria-hidden="true"></i> Inscription</a>
@@ -206,17 +160,17 @@
 
 
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <div class="jumbotron" style="text-align:center;">
                     <h2>Classe</h2>
 
                     <p>Afficher les classes</p>
-                    <a href="classe.html">
-                        <button type="button" class="btn btn-primary btn-lg" href="classe.html">Classe</button>
+                    <a href="view/classe.php">
+                        <button type="button" class="btn btn-primary btn-lg" href="view/classe.php">Classe</button>
                     </a>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <div class="jumbotron" style="text-align:center;">
                     <h2>Matiere</h2>
 
@@ -254,6 +208,17 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="jumbotron" style="text-align:center;">
+                    <h2>Domaine</h2>
+
+                    <p>Domaine</p>
+                    <a href="#">
+                        <button type="button" class="btn btn-primary btn-lg" href="#l">domaine</button>
+                    </a>
                 </div>
             </div>
         </div>
