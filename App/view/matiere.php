@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESIH | Admin</title>
     <!-- Core CSS - Include with every page -->
-    <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-    <link href="assets/css/style.css" rel="stylesheet" />
-      <link href="assets/css/main-style.css" rel="stylesheet" />
+    <link href="../assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="../assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
+      <link href="../assets/css/main-style.css" rel="stylesheet" />
 
 </head>
 
@@ -124,12 +124,31 @@
         </nav>
         <!-- end navbar side -->
         <!--  page-wrapper -->
-        <div id="page-wrapper">
+             <div id="page-wrapper">
 
             <div class="row">
+            <br><br><br>
                 <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h1 class="page-header">Administration du systeme de lESIH</h1>
+                    <form>
+                      <div class="form-group">
+                        <label for="code_matiere">Code Matiere</label>
+                        <input type="text" class="form-control" id="matiere">
+                      </div>
+                      <div class="form-group">
+                        <label for="matiere">Matiere</label>
+                        <input type="text" class="form-control" id="matiere">
+                      </div>
+                      
+                       <div class="form-group">
+                        <label for="domaine">Domaine</label>
+                            <select class="form-control" id="domaine">
+                              <option>Gestion</option>
+                              <option>L1</option>
+                            </select>
+                        </div>
+                       <button type="button" class="btn btn-primary btn-lg" >Envoyer</button>
+                    </form> 
                     
                 </div>
                 <!--End Page Header -->
@@ -138,7 +157,6 @@
             
 
         </div>
-        <!-- end page-wrapper -->
 
     </div>
     <!-- end wrapper -->
