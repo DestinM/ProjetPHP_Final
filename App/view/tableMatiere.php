@@ -1,19 +1,10 @@
 
 
 <?php
+        require_once("../model/Database.php");
 
-        # Your database credentials goes here
-        $servername = "localhost";
-        $username = "root";
-        $password = "DAANA";
-        $dbname = "schoolGestion";
-
-        // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        $database = new Database();
+        $conn = $database->connect(); 
 
         # Set Your Table class id to fetch records
         # You can set it from $_GET OR $_POST value
@@ -28,7 +19,7 @@
         $resultset = array();
 
         # Set columns and results array
-        while ($row = mysqli_fetch_assoc($result)) {
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             if (empty($columns)) {
                 $columns = array_keys($row);
             }
@@ -39,7 +30,7 @@
         # If records found
         if( count($resultset > 0 )) {
 ?>
-            <table id= "grid-basic" class="table table-bordered" >
+            <table id="example" class="table table-bordered display"  width="100%" cellspacing="0">
                 <thead>
                     <tr class='info';>
                         <?php foreach ($columns as $k => $column_name ) : ?>
@@ -47,6 +38,13 @@
                         <?php endforeach; ?>
                     </tr>
                 </thead>
+                 <tfoot>
+            <tr>
+                <th>code Matiere</th>
+                <th>matiere</th>
+                <th>domaine</th>
+            </tr>
+        </tfoot>
                 <tbody>
 
                     <?php

@@ -8,6 +8,14 @@
 */
 
 require_once("../model/Database.php");
+<<<<<<< HEAD
+
+        $database = new Database();
+        $connection = $database->connect(); 
+
+
+=======
+>>>>>>> d32043246df4a48ce130578873800f571681ead1
 $erreur = false;
 
 $matiere = $_POST['matiere'];
