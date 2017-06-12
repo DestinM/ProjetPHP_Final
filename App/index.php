@@ -93,7 +93,7 @@
 
                     <p>gerer etudiant</p>
                     <a href="#">
-                        <button type="button" data-toggle="modal" data-target="#addStudentModal"
+                        <button id="inscrireEtudiant" type="button" data-toggle="modal" data-target="#addStudentModal"
                                 class="btn btn-primary btn-lg"><i class="fa fa-plus" aria-hidden="true"></i>
                             Inscrire
                         </button>
@@ -123,7 +123,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" onclick="$('#form').submit();" class="btn btn-primary">Save changes</button>
+                                    <button type="button" onclick="$('#form').submit();" class="btn btn-primary">enregistrer</button>
                                 </div>
                             </div>
                         </div>
@@ -175,7 +175,7 @@
                     <p>gerer les matieres</p>
                     <a href="#">
                         <button type="button" data-toggle="modal" data-target="#addMatiereModal"
-                                class="btn btn-primary btn-lg" href="#"><i class="fa fa-plus" aria-hidden="true"></i>ajouter
+                                class="btn btn-primary btn-lg" href="#"><i class="fa fa-plus" aria-hidden="true"></i> ajouter
                         </button>
                     </a>
                     <a href="view/matiere.php">
@@ -235,6 +235,17 @@
 <script src="assets/plugins/metisMenu/jquery.metisMenu.js"></script>
 <script src="assets/plugins/pace/pace.js"></script>
 <script src="assets/scripts/siminta.js"></script>
+<script src="assets/scripts/notify.js"></script>
+
+<script type="text/javascript">
+var msg = '<?php echo $_GET['msg']; ?>';
+
+    if (msg == "inserted") {
+        $.notify("insertion reussie", "success");
+    }
+
+</script>
+
 
 </body>
 

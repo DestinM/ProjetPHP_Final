@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="da2449d1-f390-4585-8641-6b2b70ffba12" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/controller/addStudent.php" afterPath="$PROJECT_DIR$/App/controller/addStudent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/index.php" afterPath="$PROJECT_DIR$/App/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ProjetPHP_Final.iws" />
@@ -41,12 +42,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.333334">
-              <caret line="125" column="134" selection-start-line="125" selection-start-column="134" selection-end-line="125" selection-end-column="134" />
-              <folding />
+            <state vertical-scroll-proportion="0.7089041">
+              <caret line="243" column="9" selection-start-line="243" selection-start-column="9" selection-end-line="243" selection-end-column="9" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,13 +67,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addStudent.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="addStudent.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/controller/addStudent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7705479">
-              <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+            <state vertical-scroll-proportion="-16.666666">
+              <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
               <folding>
-                <marker date="1497302744811" expanded="true" signature="1064:1194" placeholder="insert into ..." />
+                <marker date="1497306968729" expanded="true" signature="1064:1194" placeholder="insert into ..." />
               </folding>
             </state>
           </provider>
@@ -120,6 +126,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GulpTreeLayoutManager">
+    <layout place="tools.popup">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -130,10 +141,10 @@
         <option value="$PROJECT_DIR$/App/model/model.php" />
         <option value="$PROJECT_DIR$/App/model/database.php" />
         <option value="$PROJECT_DIR$/App/controller/addStudient.php" />
-        <option value="$PROJECT_DIR$/App/index.php" />
         <option value="$PROJECT_DIR$/App/view/addStudentForm.php" />
         <option value="$PROJECT_DIR$/App/model/Database.php" />
         <option value="$PROJECT_DIR$/App/controller/addStudent.php" />
+        <option value="$PROJECT_DIR$/App/index.php" />
       </list>
     </option>
   </component>
@@ -305,7 +316,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="data&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/model/Database.php&#10;index&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/index.php&#10;mod&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/model/model.php&#10;database.php&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/model/database.php&#10;addM&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/addMatiere.php&#10;add&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/addStudient.php&#10;seeDa&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/seedDatabase.php&#10;addmati&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/addMatiere.php&#10;addStud&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/view/addStudentForm.php&#10;index.php&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/index.php" />
+    <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/index.php&#10;data&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/model/Database.php&#10;mod&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/model/model.php&#10;database.php&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/model/database.php&#10;addM&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/addMatiere.php&#10;add&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/addStudient.php&#10;seeDa&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/seedDatabase.php&#10;addmati&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/controller/addMatiere.php&#10;addStud&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/view/addStudentForm.php&#10;index.php&#9;FILE&#9;file:///var/www/html/ProjetPHP_Final/App/index.php" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -412,7 +423,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -470,7 +486,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -528,7 +549,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -600,7 +626,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -688,14 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.333334">
-          <caret line="125" column="134" selection-start-line="125" selection-start-column="134" selection-end-line="125" selection-end-column="134" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/view/addStudentForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.333334">
@@ -714,10 +737,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/controller/addStudent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7705479">
-          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+        <state vertical-scroll-proportion="-16.666666">
+          <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
           <folding>
-            <marker date="1497302744811" expanded="true" signature="1064:1194" placeholder="insert into ..." />
+            <marker date="1497306968729" expanded="true" signature="1064:1194" placeholder="insert into ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7089041">
+          <caret line="243" column="9" selection-start-line="243" selection-start-column="9" selection-end-line="243" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

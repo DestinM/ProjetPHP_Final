@@ -43,7 +43,7 @@ else {
                         VALUES (?, ?, ?, ?, ?, ?, ?)");
     $result->execute($data);
 
-    header("Location: ../../App/index.php");
+    header("Location: ../../App/index.php?msg=inserted");
 
 }
 
