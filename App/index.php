@@ -28,7 +28,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.html">
-                    <img src="assets/img/logo_esih.jpg" alt="" width="230px"  />
+                    <img src="assets/img/logo_esih.png" alt="" width="230px"  />
                 </a>
             </div>
             <!-- end navbar-header -->
@@ -139,7 +139,7 @@
                   </div>
                   <div class="col-sm-4"> 
                   <div class="jumbotron" style="text-align:center;">
-                     <h2>Incription</h2>  
+                     <h2>Bulletin</h2>  
                      <p>creer un bulletin</p>    
                      <a href="bulletin.html">
                         <button type="button" class="btn btn-primary btn-lg" href="bulletin.html">Bulletin</button>
@@ -147,7 +147,7 @@
          </div></div>
                   <div class="col-sm-4"> 
                   <div class="jumbotron" style="text-align:center;">
-                     <h2>Incription</h2>  
+                     <h2>Annee Academique</h2>  
                      <p>Liste annnee academiques</p>    
                      <a href="academique.html"><button type="button" class="btn btn-primary btn-lg" href="academique.html">Anne Academique</button></a>
                     </div></div>
@@ -157,7 +157,7 @@
              <div class="row">
                   <div class="col-sm-6">
                     <div class="jumbotron" style="text-align:center;">
-                     <h2>Incription</h2>  
+                     <h2>Classe</h2>  
                      <p>Afficher les classes</p>    
                      <a href="classe.html">
                         <button type="button" class="btn btn-primary btn-lg" href="classe.html">Classe</button>
@@ -166,7 +166,7 @@
                   </div>
                   <div class="col-sm-6"> 
                   <div class="jumbotron" style="text-align:center;">
-                     <h2>Incription</h2>  
+                     <h2>Matiere</h2>  
                      <p>liste des matieres</p>    
                      <a href="matiere.html">
                         <button type="button" class="btn btn-primary btn-lg" href="matiere.html">Matiere</button>

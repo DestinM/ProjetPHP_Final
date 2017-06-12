@@ -91,7 +91,7 @@
                         <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
                     </li>
                     <li>
-                        <a href="inscription.html"><i class="fa fa-file-o" aria-hidden="true"></i>Inscription</a>
+                        <a href="inscription.php"><i class="fa fa-file-o" aria-hidden="true"></i>Inscription</a>
                     </li>
 
                     <li>
@@ -127,37 +127,9 @@
         <div id="page-wrapper">
 
             <div class="row">
-            <br><br><br>
                 <!-- Page Header -->
                 <div class="col-lg-12">
-                    <form>
-                      <div class="form-group">
-                        <label for="email">Nom</label>
-                        <input type="text" class="form-control" id="email">
-                      </div>
-                      <div class="form-group">
-                        <label for="email">Prenom</label>
-                        <input type="text" class="form-control" id="email">
-                      </div>
-                      <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email">
-                      </div>
-
-                      <div class="form-group">
-                        <label for="email">Date</label>
-                        <input type="texte" class="form-control" id="email">
-                      </div>
-
-                       <div class="form-group">
-                        <label for="exampleSelect1">Sexe</label>
-                            <select class="form-control" id="exampleSelect1">
-                              <option>M</option>
-                              <option>F</option>
-                            </select>
-                        </div>
-                       <button type="button" class="btn btn-primary btn-lg" >Inscrire</button>
-                    </form> 
+                    <h1 class="page-header">Administration du systeme de lESIH</h1>
                     
                 </div>
                 <!--End Page Header -->
