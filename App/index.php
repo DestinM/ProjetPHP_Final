@@ -15,6 +15,31 @@
 </head>
 
 <body>
+    <?php
+    require_once("model/Database.php");
+
+    $database = new Database();
+    $conn = $database->connect();
+
+       # Fetch records 
+    $sql = "SELECT domaine FROM etudiant";
+
+    $result = $conn->query($sql);
+    $columns = array();
+    $resultset = array();
+
+        # Set columns and results array
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+        if (empty($columns)) {
+            $columns = array_keys($row);
+        }
+        $resultNew[] = $row;
+    }
+/*    echo "<pre>";
+    print_r($resultNew);
+    echo "</pre>";
+*/
+    ?>
 <!--  wrapper -->
 <div id="wrapper">
     <!-- navbar top -->

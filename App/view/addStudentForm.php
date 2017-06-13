@@ -24,26 +24,39 @@
     </div>
     <div class="form-group">
         <label>domaine</label>
-        <input name="domaine" id="domaine" type="text" class="form-control" placeholder="domaine">
-    </div>
-    <div class="form-group">
-        <label>annee_academique</label>
-        <input name="annee_academique" id="annee_academique" type="text" class="form-control" placeholder="annee_academique">
-    </div>
-    <div class="form-group">
-        <label>vacation</label>
-        <select class="form-control" name="vacation" id="vacation">
-            <option value="matin">matin</option>
-            <option value="soir">soir</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label>classe</label>
-        <select class="form-control" name="classe" id="classe">
-            <option value="propedeutique">propedeutique</option>
-            <option value="L1">L1</option>
-            <option value="L2">L2</option>
-            <option value="L3">L3</option>
-        </select>
-    </div>
-</form>
+        <select id="domaine" name="domaine" class="form-control">
+            <?php 
+            if( count($resultNew > 0 )) {
+                foreach($resultNew as $index => $row) { ?>
+                    <option value="<?php echo $row['domaine']; ?>"><?php echo $row['domaine']; ?></option>
+                    <?php }
+
+                } else { ?>
+                    <option value="none">--none--</option>
+                    <?php }
+
+                    ?>
+                </select>
+
+            </div>
+            <div class="form-group">
+                <label>annee_academique</label>
+                <input name="annee_academique" id="annee_academique" type="text" class="form-control" placeholder="annee_academique">
+            </div>
+            <div class="form-group">
+                <label>vacation</label>
+                <select class="form-control" name="vacation" id="vacation">
+                    <option value="matin">matin</option>
+                    <option value="soir">soir</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>classe</label>
+                <select class="form-control" name="classe" id="classe">
+                    <option value="propedeutique">propedeutique</option>
+                    <option value="L1">L1</option>
+                    <option value="L2">L2</option>
+                    <option value="L3">L3</option>
+                </select>
+            </div>
+        </form>
