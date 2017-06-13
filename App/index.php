@@ -22,7 +22,7 @@
     $conn = $database->connect();
 
        # Fetch records 
-    $sql = "SELECT domaine FROM etudiant";
+    $sql = "SELECT Libelle_Domaine FROM domaine";
 
     $result = $conn->query($sql);
     $columns = array();

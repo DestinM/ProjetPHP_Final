@@ -28,7 +28,7 @@
             <?php 
             if( count($resultNew > 0 )) {
                 foreach($resultNew as $index => $row) { ?>
-                    <option value="<?php echo $row['domaine']; ?>"><?php echo $row['domaine']; ?></option>
+                    <option value="<?php echo $row['Libelle_Domaine']; ?>"><?php echo $row['Libelle_Domaine']; ?></option>
                     <?php }
 
                 } else { ?>
