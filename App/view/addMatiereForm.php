@@ -1,9 +1,4 @@
-<form id="addMatiereForm" method="post" action="controller/addMatiere.php">
-
-    <div class="form-group">
-        <label for="code_matiere">Code Matiere</label>
-        <input type="text" class="form-control" id="code_matiere" name="code_matiere">
-    </div>
+<form id="matiereForm" method="post" action="controller/addMatiere.php">
     <div class="form-group">
         <label for="matiere">Matiere</label>
         <input type="text" class="form-control" id="matiere" name="matiere">

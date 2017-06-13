@@ -32,7 +32,7 @@
                 </a>
             </div>
             <!-- end navbar-header -->
-           
+
 
         </nav>
         <!-- end navbar top -->
@@ -43,19 +43,11 @@
             <div class="sidebar-collapse">
                 <!-- side-menu -->
                 <ul class="nav" id="side-menu">
-                   
-                    
+
+
                     <li class="">
                         <a href="../index.php"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
                     </li>
-                    <li>
-                        <a href="inscription.php"><i class="fa fa-file-o" aria-hidden="true"></i>Inscription</a>
-                    </li>
-
-                    <li>
-                        <a href="bulletin.php"><i class="fa fa-file-text-o" aria-hidden="true"></i>Creer un bulletin</a>
-                    </li>
-
                     <li>
                         <a href="#"><i class="fa fa-cog" aria-hidden="true"></i>Parametrage<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -72,137 +64,137 @@
                         <!-- second-level-items -->
                     </li>
 
-                        </ul>
-                        <!-- second-level-items -->
-                    </li>
                 </ul>
-                <!-- end side-menu -->
-            </div>
-            <!-- end sidebar-collapse -->
-        </nav>
-        <!-- end navbar side -->
-        <!--  page-wrapper -->
-             <div id="page-wrapper" style="padding-top:30px;">
-
-            <div class="row">
-                <div class="col-lg-12">
-                  <?php require("tableListerEtudiant.php"); ?>
-                </div>
-
-                <div class="clearfix"></div>
-<ul class="pagination pull-right">
-  <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-  <li class="active"><a href="#">1</a></li>
-  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
-  <li><a href="#">4</a></li>
-  <li><a href="#">5</a></li>
-  <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-</ul>
-                
-            </div>
-            
-        </div>
+                <!-- second-level-items -->
+            </li>
+        </ul>
+        <!-- end side-menu -->
     </div>
+    <!-- end sidebar-collapse -->
+</nav>
+<!-- end navbar side -->
+<!--  page-wrapper -->
+<div id="page-wrapper" style="padding-top:30px;">
+
+    <div class="row">
+        <div class="col-lg-12">
+          <?php require("tableListerEtudiant.php"); ?>
+      </div>
+
+      <div class="clearfix"></div>
+      <ul class="pagination pull-right">
+          <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+      </ul>
+
+  </div>
+
+</div>
+</div>
 </div>
 
 
 <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-      <div class="modal-dialog">
+  <div class="modal-dialog">
     <div class="modal-content">
-          <div class="modal-header">
+      <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
         <h4 class="modal-title custom_align" id="Heading">Editer</h4>
-      </div>
-          <div class="modal-body">
-          <div class="form-group">
-        <input class="form-control" name="f" type="text"  value="<?php echo $resultset[0] ?>">
-        </div>
-        <div class="form-group">
-        
-        <input class="form-control " type="text" >
-        </div>
-        <div class="form-group">
-             <input class="form-control " type="text" >
-        
-        </div>
-        <div class="form-group">
-             <input class="form-control " type="text" >
-        
-        </div>
-        <div class="form-group">
-             <input class="form-control " type="text" >
-        
-        </div>
-        <div class="form-group">
-             <input class="form-control " type="text" >
-        
-        </div>
-        <div class="form-group">
-             <input class="form-control " type="text" >
-        
-        </div>
-        <div class="form-group">
-             <input class="form-control " type="text" >
-        
-        </div>
-        <div class="form-group">
-             <input class="form-control " type="text" >
-        
-        </div>
-      </div>
-          <div class="modal-footer ">
-        <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
-      </div>
-        </div>
-    <!-- /.modal-content --> 
-  </div>
-      <!-- /.modal-dialog --> 
     </div>
-    
-    
-    
-    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-      <div class="modal-dialog">
+    <div class="modal-body">
+      <div class="form-group">
+        <input class="form-control" name="f" type="text"  value="<?php echo $resultset[0] ?>">
+    </div>
+    <div class="form-group">
+
+        <input class="form-control " type="text" >
+    </div>
+    <div class="form-group">
+       <input class="form-control " type="text" >
+
+   </div>
+   <div class="form-group">
+       <input class="form-control " type="text" >
+
+   </div>
+   <div class="form-group">
+       <input class="form-control " type="text" >
+
+   </div>
+   <div class="form-group">
+       <input class="form-control " type="text" >
+
+   </div>
+   <div class="form-group">
+       <input class="form-control " type="text" >
+
+   </div>
+   <div class="form-group">
+       <input class="form-control " type="text" >
+
+   </div>
+   <div class="form-group">
+       <input class="form-control " type="text" >
+
+   </div>
+</div>
+<div class="modal-footer ">
+    <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
+</div>
+</div>
+<!-- /.modal-content --> 
+</div>
+<!-- /.modal-dialog --> 
+</div>
+
+
+
+<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+  <div class="modal-dialog">
     <div class="modal-content">
-          <div class="modal-header">
+      <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
         <h4 class="modal-title custom_align" id="Heading">Delete this entry</h4>
-      </div>
-          <div class="modal-body">
-       
-       <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?</div>
-       
-      </div>
-        <div class="modal-footer ">
-        <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
-      </div>
-        </div>
-    <!-- /.modal-content --> 
-           </div>
-
-
-
-            
-
-        </div>
-
     </div>
+    <div class="modal-body">
 
-    <!-- end wrapper -->
+     <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?</div>
 
-    <!-- Core Scripts - Include with every page -->
-    <script src="../assets/plugins/jquery-1.12.4.js"></script>
-    <script src="../assets/plugins/dataTables.editor.min.js"></script>
+ </div>
+ <div class="modal-footer ">
+    <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+</div>
+</div>
+<!-- /.modal-content --> 
+</div>
 
-    <script src="../assets/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="../assets/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="../assets/plugins/pace/pace.js"></script>
-    <script src="../assets/scripts/siminta.js"></script>
 
-     
-    <script src="../assets/plugins/dataTables/jquery.dataTables.min.js"></script>
+
+
+
+</div>
+
+</div>
+
+<!-- end wrapper -->
+
+<!-- Core Scripts - Include with every page -->
+<script src="../assets/plugins/jquery-1.12.4.js"></script>
+<script src="../assets/plugins/dataTables.editor.min.js"></script>
+
+<script src="../assets/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="../assets/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="../assets/plugins/pace/pace.js"></script>
+<script src="../assets/scripts/siminta.js"></script>
+
+
+<script src="../assets/plugins/dataTables/jquery.dataTables.min.js"></script>
 
 
     <!-- <script>
@@ -211,8 +203,8 @@
         });
     </script> -->
     <script>
-$(document).ready(function(){
-$("#mytable #checkall").click(function () {
+        $(document).ready(function(){
+/*$("#mytable #checkall").click(function () {
         if ($("#mytable #checkall").is(':checked')) {
             $("#mytable input[type=checkbox]").each(function () {
                 $(this).prop("checked", true);
@@ -226,9 +218,57 @@ $("#mytable #checkall").click(function () {
     });
     
     $("[data-toggle=tooltip]").tooltip();
-});
 
-    </script>
+     $('#mytable tfoot th').each( function () {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
+ 
+    // DataTable
+    var table = $('#mytable').DataTable();
+ 
+    // Apply the search
+    table.columns().every( function () {
+        var that = this;
+ 
+        $( 'input', this.footer() ).on( 'keyup change', function () {
+            if ( that.search() !== this.value ) {
+                that
+                    .search( this.value )
+                    .draw();
+            }
+        } );
+    } );
+
+});
+*/
+/*    // Setup - add a text input to each footer cell
+    $('#mytable tfoot th').each( function () {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
+
+    // DataTable
+    var table = $('#mytable').DataTable();
+
+    // Apply the search
+    table.columns().every( function () {
+        var that = this;
+
+        $( 'input', this.footer() ).on( 'keyup change', function () {
+            if ( that.search() !== this.value ) {
+                that
+                .search( this.value )
+                .draw();
+            }
+        } );
+    } );
+*/
+
+} );
+</script>
+
+</script>
 
 </body>
 

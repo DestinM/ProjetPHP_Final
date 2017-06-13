@@ -36,23 +36,11 @@
                         <?php foreach ($columns as $k => $column_name ) : ?>
                             <th> <?php echo $column_name;?> </th>
                         <?php endforeach; ?>
+                            <th>mod</th>
+                            <th>del</th>
                     </tr>
                 </thead>
                  <tfoot>
-            <tr>
-                <th id="checkall">code etudiant</th>
-                <th id="checkall">nom</th>
-                <th id="checkall">prenom</th>
-                <th id="checkall">sexe</th>
-                <th id="checkall">date naissancee </th>
-                <th id="checkall">email</th>
-                <th id="checkall">domaine </th>
-                <th id="checkall">anne academique</th>
-                <th id="checkall">vacation</th>
-                <th id="checkall">classe</th>
-                <th id="checkall">edit</th>
-                <th id="checkall">delete</th>
-            </tr>
         </tfoot>
                 <tbody>
 
@@ -63,7 +51,6 @@
                         $column_counter =0;
                     ?>
                         <tr class='success';>
-                        <td><input type="checkbox" class="checkthis" /></td>
                             <?php for ($i=0; $i < count($columns); $i++):?>
                                 <td> <?php echo $row[$columns[$column_counter++]]; ?>   </td>
 

@@ -47,14 +47,6 @@
                     <a href="index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                 </li>
                 <li>
-                    <a data-toggle="modal" data-target="#addStudentModal"><i class="fa fa-file-o" aria-hidden="true"></i> Inscription</a>
-                </li>
-
-                <li>
-                    <a href="view/bulletin.php"><i class="fa fa-file-text-o" aria-hidden="true"></i> Creer un bulletin</a>
-                </li>
-
-                <li>
                     <a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Parametrage<span
                             class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
@@ -201,7 +193,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary" href="controller/addMatiere.php">Save changes</button>
+                                    <button type="button" class="btn btn-primary" onclick="$('#matiereForm').submit();">Save changes</button>
                                 </div>
                             </div>
                         </div>

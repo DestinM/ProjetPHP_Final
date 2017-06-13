@@ -49,14 +49,6 @@
                         <a href="../index.php"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
                     </li>
                     <li>
-                        <a href="inscription.php"><i class="fa fa-file-o" aria-hidden="true"></i>Inscription</a>
-                    </li>
-
-                    <li>
-                        <a href="bulletin.php"><i class="fa fa-file-text-o" aria-hidden="true"></i>Creer un bulletin</a>
-                    </li>
-
-                    <li>
                         <a href="#"><i class="fa fa-cog" aria-hidden="true"></i>Parametrage<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>

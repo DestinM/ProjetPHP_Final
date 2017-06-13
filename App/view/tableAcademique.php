@@ -12,7 +12,7 @@
         //$class = mysqli_real_escape_string($conn, $_POST['Class']);
 
         # Fetch records 
-        $sql = "SELECT Nom,Prenom,anne_academique FROM etudiant";
+        $sql = "SELECT Nom,Prenom,annee_academique FROM etudiant";
 
         $result = $conn->query($sql);
         $columns = array();
@@ -42,7 +42,7 @@
             <tr>
                 <th>nom</th>
                 <th>prenom</th>
-                <th>anne</th>
+                <th>annee</th>
             </tr>
         </tfoot>
                 <tbody>

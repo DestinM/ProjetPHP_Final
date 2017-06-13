@@ -36,6 +36,7 @@
                         <?php foreach ($columns as $k => $column_name ) : ?>
                             <th> <?php echo $column_name;?> </th>
                         <?php endforeach; ?>
+                        <th>notes</th>
                     </tr>
                 </thead>
                  <tfoot>
@@ -57,7 +58,7 @@
                             <?php for ($i=0; $i < count($columns); $i++):?>
                                 <td> <?php echo $row[$columns[$column_counter++]]; ?>   </td>
                             <?php endfor;?>
-                             <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" >notes</button></p></td>
+                             <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button onclick="$('#noteInput').attr('value', <?php echo $index?>)" id="<?php echo $index; ?>" class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" >notes</button></p></td>
                         </tr>
                     <?php } ?>
 
