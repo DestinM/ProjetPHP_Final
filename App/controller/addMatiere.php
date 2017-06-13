@@ -9,8 +9,8 @@
 
 require_once("../model/Database.php");
 
-if (isset($_POST['button'])) {
-
+        $database = new Database();
+        $connection = $database->connect(); 
 
 
 $erreur = false;
@@ -43,15 +43,18 @@ if (false) {
     echo '<font color="red">Attention, seul le champs <b>ICQ</b> peut rester vide !</font>';
 } // Aucun champ n'est vide, on peut enregistrer dans la table
 else {
-    //Connexion a la basse de donnée.
-//    $data = new Array();
+
+  $data = array();
+//    $data[0] = $code;
+    $data[0] = $code_matiere;
+    $data[1] = $matiere;
+    $data[1] = $domaine;
+
     $database = new Database();
     $connection = $database->connect();
-   $result = $connection->query("insert into matiere (Matiere_code, Matiere_name, domaine)
-                       VALUES ('$code_matiere', '$matiere', '$domaine')");
-   $result->execute();
-
-}
+    $result = $connection->prepare("insert into Etudiant (code_matiere, matiere,domaine)
+                        VALUES (?, ?,?)");
+    $result->execute($data);
 
 }
 ?>
