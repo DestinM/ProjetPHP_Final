@@ -30,7 +30,7 @@
         # If records found
         if( count($resultset > 0 )) {
 ?>
-            <table id= "grid-basic" class="table table-bordered" >
+            <table id="example" class="table table-bordered display"  width="100%" cellspacing="0">
                 <thead>
                     <tr class='info';>
                         <?php foreach ($columns as $k => $column_name ) : ?>
@@ -38,6 +38,13 @@
                         <?php endforeach; ?>
                     </tr>
                 </thead>
+                 <tfoot>
+            <tr>
+                <th>code Matiere</th>
+                <th>matiere</th>
+                <th>domaine</th>
+            </tr>
+        </tfoot>
                 <tbody>
 
                     <?php
