@@ -1,9 +1,5 @@
 <form id="form" role="form" method="post" action="controller/addStudent.php">
     <div class="form-group">
-        <label>code</label>
-        <input name="code" id="code" type="text" class="form-control" placeholder="code">
-    </div>
-    <div class="form-group">
         <label>nom</label>
         <input name="nom" id="nom" type="text" class="form-control" placeholder="nom">
     </div>
@@ -27,11 +23,27 @@
         <input name="email" id="email" type="text" class="form-control" placeholder="">
     </div>
     <div class="form-group">
+        <label>domaine</label>
+        <input name="domaine" id="domaine" type="text" class="form-control" placeholder="domaine">
+    </div>
+    <div class="form-group">
+        <label>annee_academique</label>
+        <input name="annee_academique" id="annee_academique" type="text" class="form-control" placeholder="annee_academique">
+    </div>
+    <div class="form-group">
         <label>vacation</label>
-        <input name="vacation" id="vacation" type="text" class="form-control" placeholder="vacation">
+        <select class="form-control" name="vacation" id="vacation">
+            <option value="matin">matin</option>
+            <option value="soir">soir</option>
+        </select>
     </div>
     <div class="form-group">
         <label>classe</label>
-        <input name="classe" id="classe" type="text" class="form-control" placeholder="classe">
+        <select class="form-control" name="classe" id="classe">
+            <option value="propedeutique">propedeutique</option>
+            <option value="L1">L1</option>
+            <option value="L2">L2</option>
+            <option value="L3">L3</option>
+        </select>
     </div>
 </form>

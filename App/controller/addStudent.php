@@ -7,12 +7,13 @@
 require_once("../model/Database.php");
 $erreur = false;
 
-$code = $_POST['code'];
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
 $sexe = $_POST['sexe'];
 $dateNaissance = $_POST['dateNaissance'];
 $email = $_POST['email'];
+$domaine = $_POST['domaine'];
+$annee_academique = $_POST['annee_academique'];
 $vacation = $_POST['vacation'];
 $classe = $_POST['classe'];
 
@@ -31,16 +32,18 @@ else {
     $data[2] = $sexe;
     $data[3] = $dateNaissance;
     $data[4] = $email;
-    $data[5] = $vacation;
-    $data[6] = $classe;
+    $data[5] = $domaine;
+    $data[6] = $annee_academique;
+    $data[7] = $vacation;
+    $data[8] = $classe;
     echo "<pre>";
     print_r($data);
     echo "</pre>";
 
     $database = new Database();
     $connection = $database->connect();
-    $result = $connection->prepare("insert into etudiant (nom, prenom, sexe, Date_Naiss, email, vacation, classe)
-                        VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $result = $connection->prepare("insert into etudiant (nom, prenom, sexe, Date_Naiss, email, domaine, annee_academique,vacation, classe)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $result->execute($data);
 
     header("Location: ../../App/index.php?msg=inserted");

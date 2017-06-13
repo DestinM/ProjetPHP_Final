@@ -12,8 +12,11 @@ $connection = $database->connect();
 
 $erreur = false;
 
-$matiere = $_POST['matiere'];
-$domaine = $_POST['domaine'];
+//$matiere = $_POST['matiere'];
+//$note = $_POST['note'];
+
+$matiere = "DAANA";
+$note = "34";
 
 //echo $erreur;
 // On vérifie si les champs sont vides
@@ -26,7 +29,7 @@ else {
     $data = array();
 
     $data[0] = $matiere;
-    $data[1] = $domaine;
+    $data[1] = $note;
 
     echo "<pre>";
     print_r($data);
@@ -34,7 +37,7 @@ else {
 
     $database = new Database();
     $connection = $database->connect();
-    $result = $connection->prepare("insert into matiere (Matiere_Name, domaine)
+    $result = $connection->prepare("insert into etudiant_note (matiere, note)
                         VALUES (?, ?)");
     $result->execute($data);
 
