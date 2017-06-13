@@ -28,20 +28,22 @@ else {
 //    $data[0] = $code;
     $data[0] = $nom;
     $data[1] = $prenom;
-//    $data[3] = $sexe;
-//    $data[4] = $dateNaissance;
-//    $data[4] = $email;
-//    $data[5] = $vacation;
-//    $data[6] = $classe;
+    $data[2] = $sexe;
+    $data[3] = $dateNaissance;
+    $data[4] = $email;
+    $data[5] = $vacation;
+    $data[6] = $classe;
     echo "<pre>";
     print_r($data);
     echo "</pre>";
 
     $database = new Database();
     $connection = $database->connect();
-    $result = $connection->prepare("insert into Etudiant (nom, prenom)
-                        VALUES (?, ?)");
+    $result = $connection->prepare("insert into etudiant (nom, prenom, sexe, Date_Naiss, email, vacation, classe)
+                        VALUES (?, ?, ?, ?, ?, ?, ?)");
     $result->execute($data);
+
+    header("Location: ../../App/index.php?msg=inserted");
 
 }
 
