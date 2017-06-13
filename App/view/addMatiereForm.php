@@ -8,7 +8,7 @@
         <label for="domaine">Domaine</label>
         <select class="form-control" id="domaine" name="domaine">
             <option value="gestion">Gestion</option>
-            <option value="L1">L1</option>
+            <option value="informatique">informatique</option>
         </select>
     </div>
 </form>
