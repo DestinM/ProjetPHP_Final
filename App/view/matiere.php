@@ -10,7 +10,7 @@
     <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="../assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
     <link href="../assets/css/style.css" rel="stylesheet" />
-      <link href="../assets/css/main-style.css" rel="stylesheet" />
+    <link href="../assets/css/main-style.css" rel="stylesheet" />
 
 </head>
 
@@ -28,7 +28,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="../index.php">
-                    <img src="assets/img/logo_esih.png" alt="" width="230px"  />
+                    <img src="../assets/img/logo_esih.png" alt="" width="230px"  />
                 </a>
             </div>
             <!-- end navbar-header -->
@@ -86,7 +86,7 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                  <?php require("../view/tableMatiere.php"); ?>
+                  <?php require("tableMatiere.php"); ?>
                 </div>
            </div>
 

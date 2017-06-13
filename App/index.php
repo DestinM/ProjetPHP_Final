@@ -47,7 +47,7 @@
                     <a href="index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                 </li>
                 <li>
-                    <a href="view/inscription.php"><i class="fa fa-file-o" aria-hidden="true"></i> Inscription</a>
+                    <a data-toggle="modal" data-target="#addStudentModal"><i class="fa fa-file-o" aria-hidden="true"></i> Inscription</a>
                 </li>
 
                 <li>
@@ -93,13 +93,13 @@
 
                     <p>gerer etudiant</p>
                     <a href="#">
-                        <button id="inscrireEtudiant" type="button" data-toggle="modal" data-target="#addStudentModal"
+                        <button type="button" data-toggle="modal" data-target="#addStudentModal"
                                 class="btn btn-primary btn-lg"><i class="fa fa-plus" aria-hidden="true"></i>
                             Inscrire
                         </button>
                     </a>
-                    <a href="#">
-                        <button type="button" class="btn btn-primary btn-lg">
+                    <a href="view/lister_etudiant.php">
+                        <button type="button" class="btn btn-primary btn-lg" href="view/lister_etudiant.php">
                             lister
                         </button>
                     </a>
@@ -112,7 +112,7 @@
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"
                                             aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title" id="myModalLabel">Inscription etudiant</h4>
+                                    <h4 class="modal-title" id="myModalLabel">INSCRIPTION ETUDIANT</h4>
                                 </div>
                                 <div class="modal-body">
                                     <div class="row">
@@ -123,7 +123,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" onclick="$('#form').submit();" class="btn btn-primary">enregistrer</button>
+                                    <button type="button" onclick="$('#form').submit();" class="btn btn-primary">Save changes</button>
                                 </div>
                             </div>
                         </div>
@@ -148,8 +148,8 @@
                     <h2>Annee Academique</h2>
 
                     <p>Liste annnee academiques</p>
-                    <a href="academique.html">
-                        <button type="button" class="btn btn-primary btn-lg" href="academique.html">Anne Academique
+                    <a href="view/academique.php">
+                        <button type="button" class="btn btn-primary btn-lg" href="view/academique.php">Anne Academique
                         </button>
                     </a>
                 </div>
@@ -175,7 +175,7 @@
                     <p>gerer les matieres</p>
                     <a href="#">
                         <button type="button" data-toggle="modal" data-target="#addMatiereModal"
-                                class="btn btn-primary btn-lg" href="#"><i class="fa fa-plus" aria-hidden="true"></i> ajouter
+                                class="btn btn-primary btn-lg" href="#"><i class="fa fa-plus" aria-hidden="true"></i>ajouter
                         </button>
                     </a>
                     <a href="view/matiere.php">
@@ -201,7 +201,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" onclick="$('#addMatiereForm').submit();" class="btn btn-primary">ajouter</button>
+                                    <button type="button" class="btn btn-primary" href="controller/addMatiere.php">Save changes</button>
                                 </div>
                             </div>
                         </div>
@@ -213,9 +213,9 @@
                 <div class="jumbotron" style="text-align:center;">
                     <h2>Domaine</h2>
 
-                    <p>Domaine</p>
-                    <a href="#">
-                        <button type="button" class="btn btn-primary btn-lg" href="#l">domaine</button>
+                    <p>lister les domaines</p>
+                    <a href="view/domaine.php">
+                        <button type="button" class="btn btn-primary btn-lg" href="view/domaine.php">domaine</button>
                     </a>
                 </div>
             </div>
@@ -235,17 +235,6 @@
 <script src="assets/plugins/metisMenu/jquery.metisMenu.js"></script>
 <script src="assets/plugins/pace/pace.js"></script>
 <script src="assets/scripts/siminta.js"></script>
-<script src="assets/scripts/notify.js"></script>
-
-<script type="text/javascript">
-var msg = '<?php echo $_GET['msg']; ?>';
-
-    if (msg == "inserted") {
-        $.notify("insertion reussie", "success");
-    }
-
-</script>
-
 
 </body>
 

@@ -16,11 +16,11 @@
     </div>
     <div class="form-group">
         <label>Date de naissance</label>
-        <input name="dateNaissance" id="dateNaissance" type="datetime" class="form-control" placeholder="">
+        <input name="dateNaissance" id="dateNaissance" type="datetime" class="form-control" placeholder="date de naissance">
     </div>
     <div class="form-group">
         <label>email</label>
-        <input name="email" id="email" type="text" class="form-control" placeholder="">
+        <input name="email" id="email" type="text" class="form-control" placeholder="email">
     </div>
     <div class="form-group">
         <label>domaine</label>

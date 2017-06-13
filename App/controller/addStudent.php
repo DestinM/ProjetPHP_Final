@@ -42,7 +42,7 @@ else {
 
     $database = new Database();
     $connection = $database->connect();
-    $result = $connection->prepare("insert into etudiant (nom, prenom, sexe, Date_Naiss, email, domaine, annee_academique,vacation, classe)
+    $result = $connection->prepare("insert into etudiant (Nom, Prenom, Sexe, Date_Naiss, Email, domaine, annee_academique,vacation, classe)
                         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $result->execute($data);
 
