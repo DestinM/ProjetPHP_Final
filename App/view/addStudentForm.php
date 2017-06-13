@@ -10,7 +10,7 @@
     <div class="form-group">
         <label>sexe</label>
         <select name="sexe" id="sexe">
-            <option value="masculin">masculing</option>
+            <option value="masculin">masculin</option>
             <option value="feminin">feminin</option>
         </select>
     </div>
