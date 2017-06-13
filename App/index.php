@@ -135,10 +135,10 @@
                     <h2>Bulletin</h2>
 
                     <p>generer bulletin pour les eleves</p>
-                    <a href="#">
+                    <a href="view/bulletin.php">
                         <button type="button" data-toggle="modal"
                                 class="btn btn-primary btn-lg"
-                                href="#"> Bulletin
+                                href="view/bulletin.php"> Bulletin
                         </button>
                     </a>
                 </div>

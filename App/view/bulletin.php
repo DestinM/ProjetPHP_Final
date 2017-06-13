@@ -10,7 +10,7 @@
     <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="../assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
     <link href="../assets/css/style.css" rel="stylesheet" />
-      <link href="../assets/css/main-style.css" rel="stylesheet" />
+    <link href="../assets/css/main-style.css" rel="stylesheet" />
 
 </head>
 
@@ -32,7 +32,7 @@
                 </a>
             </div>
             <!-- end navbar-header -->
-          
+           
 
         </nav>
         <!-- end navbar top -->
@@ -43,7 +43,7 @@
             <div class="sidebar-collapse">
                 <!-- side-menu -->
                 <ul class="nav" id="side-menu">
-                 
+                   
                     
                     <li class="">
                         <a href="../index.php"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
@@ -82,31 +82,58 @@
         </nav>
         <!-- end navbar side -->
         <!--  page-wrapper -->
-        <div id="page-wrapper">
+             <div id="page-wrapper" style="padding-top:30px;">
 
             <div class="row">
-                <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h1 class="page-header">Administration du systeme de lESIH</h1>
-                    
+                  <?php require("tableauBulletin.php"); ?>
                 </div>
-                <!--End Page Header -->
-            </div>
+           </div>
 
             
 
         </div>
-        <!-- end page-wrapper -->
 
     </div>
+
     <!-- end wrapper -->
 
     <!-- Core Scripts - Include with every page -->
-    <script src="assets/plugins/jquery-1.10.2.js"></script>
-    <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="assets/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="assets/plugins/pace/pace.js"></script>
-    <script src="assets/scripts/siminta.js"></script>
+    <script src="../assets/plugins/jquery-1.12.4.js"></script>
+    <script src="../assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="../assets/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="../assets/plugins/pace/pace.js"></script>
+    <script src="../assets/scripts/siminta.js"></script>
+
+     
+    <script src="../assets/plugins/dataTables/jquery.dataTables.min.js"></script>
+
+
+    <!-- <script>
+        $(document).ready(function () {
+            $('#dataTables-example').dataTable();
+        });
+    </script> -->
+    <script>
+$(document).ready(function(){
+$("#mytable #checkall").click(function () {
+        if ($("#mytable #checkall").is(':checked')) {
+            $("#mytable input[type=checkbox]").each(function () {
+                $(this).prop("checked", true);
+            });
+
+        } else {
+            $("#mytable input[type=checkbox]").each(function () {
+                $(this).prop("checked", false);
+            });
+        }
+    });
+    
+    $("[data-toggle=tooltip]").tooltip();
+});
+
+    </script>
+
 
 </body>
 
