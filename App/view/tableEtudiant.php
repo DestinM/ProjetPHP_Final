@@ -30,33 +30,27 @@
         # If records found
         if( count($resultset > 0 )) {
 ?>
-            <table id="tableEtudiant" class="table table-bordered display"  width="100%" cellspacing="0">
+            <table id="example" class="table table-bordered display"  width="100%" cellspacing="0">
                 <thead>
                     <tr class='info';>
                         <?php foreach ($columns as $k => $column_name ) : ?>
                             <th> <?php echo $column_name;?> </th>
                         <?php endforeach; ?>
-                            <th>mod</th>
-                            <th>del</th>
+                        <th>action</th>
                     </tr>
                 </thead>
-                <tfoot>
-                   <tr>
-                        <th>foo</th>
-                        <th>foo</th>
-                        <th>foo</th>
-                        <th>foo</th>
-                        <th>foo</th>
-                        <th>foo</th>
-                        <th>foo</th>
-                        <th>foo</th>
-                        <th>foo</th>
-                        <th>foo</th>
-                        <th>foo</th>
-                        <th>foo</th>
-                   </tr>
-
-               </tfoot>
+                 <tfoot>
+            <tr>
+                <th>code etudiant</th>
+                <th>nom</th>
+                <th>prenom</th>
+                <th>sexe</th>
+                <th>Date_Naiss</th>
+                <th>email</th>
+                <th>vacation</th>
+                <th>classe</th>
+            </tr>
+        </tfoot>
                 <tbody>
 
                     <?php
@@ -68,12 +62,12 @@
                         <tr class='success';>
                             <?php for ($i=0; $i < count($columns); $i++):?>
                                 <td> <?php echo $row[$columns[$column_counter++]]; ?>   </td>
-
                             <?php endfor;?>
-                            <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-                            
-    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-    
+                                <td id="$index">
+                                    <a id="$index" href="">M</a>
+                                    <a href="">S</a>
+                                    <a href="">B</a>
+                                </td>
                         </tr>
                     <?php } ?>
 

@@ -41,7 +41,7 @@
             </div>
             <div class="form-group">
                 <label>annee_academique</label>
-                <input name="annee_academique" id="annee_academique" type="text" class="form-control" placeholder="annee_academique">
+                <input name="annee_academique" id="annee_academique" type="number" min="2015" class="form-control" placeholder="annee_academique">
             </div>
             <div class="form-group">
                 <label>vacation</label>
