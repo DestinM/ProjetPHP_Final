@@ -153,7 +153,7 @@
                     <label for="note">note</label>
 <!--                     <input type="number" min="0" max="100" class="form-control" id="note" name="note">
  -->                     <select id="note" name="note">
-                        <?php for ($i=0; $i < 100; $i++) { ?>
+                        <?php for ($i=0; $i <= 100; $i++) { ?>
                             <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
                         <?php } ?>
                     </select>
@@ -167,7 +167,7 @@
 
     <div class="modal-footer ">
         <button onclick="$('#bulletinForm').submit();" type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign">
-        </span> Update</button>
+        </span> enregistrer</button>
     </div>
 </div>
 <!-- /.modal-content --> 
