@@ -41,9 +41,9 @@ catch(Exception $e)
 $reponse = $conn->query('SELECT matiere, note FROM etudiant_note');
 
 $donnees = $reponse->fetchAll();
-echo "<pre>";
-print_r($donnees[1]->matiere);
-echo "</pre>";
+//echo "<pre>";
+//print_r($donnees[1]->matiere);
+//echo "</pre>";
 ?>
 
 <table>
