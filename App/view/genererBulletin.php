@@ -41,6 +41,7 @@ catch(Exception $e)
 $reponse = $conn->query('SELECT matiere, note FROM etudiant_note');
 
 $donnees = $reponse->fetchAll();
+$total = 0;
 //echo "<pre>";
 //print_r($donnees[1]->matiere);
 //echo "</pre>";
@@ -53,8 +54,13 @@ $donnees = $reponse->fetchAll();
 		<tr>
 			<td><?php echo $donnees[$i]->matiere; ?></td>
 			<td><?php echo $donnees[$i]->note; ?></td>
+            <?php $total += $donnees[$i]->note; ?>
 		</tr>
 	<?php } ?>
+    <tr>
+        <td><strong>Total</strong></td>
+        <td><?php echo $total; ?></td>
+    </tr>
 	</tbody>
 </table>
 
@@ -76,6 +82,7 @@ $reponse->closeCursor(); // Termine le traitement de la requête
     var doc = new jsPDF();
     var nom = <?php echo $_GET['nom']; ?>;
     var prenom = <?php echo $_GET['prenom']; ?>;
+    var impression = '';
 
 //    doc.text('Hello world!', 10, 10);
     impression = nom + " " + prenom + "\n";
@@ -86,6 +93,8 @@ $reponse->closeCursor(); // Termine le traitement de la requête
 	impression += '<?php echo $donnees[$i]->matiere . " : " . $donnees[$i]->note ; ?>\n';
 
 	<?php } ?>
+
+    impression += '<?php  echo "Total : " . $total; ?>';
 
     doc.text(impression, 10, 10);
     //alert(impression);
