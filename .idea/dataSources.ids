@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - schoolGestion@localhost" uuid="1733c546-e119-453e-8c94-e79c00dc195b">
+    <database-info product="MySQL" version="5.5.43-0+deb8u1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="schoolGestion"/>
+    <table name="Domaine" schema="" catalog="schoolGestion" type="TABLE">
+      <column name="Code_Domaine" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Libelle_Domaine" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="Code_Domaine"/>
+      <exported-key name="mention_code_domaine_foreign" table="Mention" schema="" catalog="schoolGestion" columns="Code_Domaine"/>
+    </table>
+    <table name="Mention" schema="" catalog="schoolGestion" type="TABLE">
+      <column name="Code_Mention" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Code_Domaine" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Libelle_Mention, 50" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="Code_Mention"/>
+      <foreign-key name="mention_code_domaine_foreign" columns="Code_Domaine" ref-table="Domaine" ref-schema="" ref-catalog="schoolGestion" ref-columns="Code_Domaine" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="mention_code_domaine_foreign" unique="false" columns="Code_Domaine"/>
+    </table>
+    <table name="annee_academique" schema="" catalog="schoolGestion" type="TABLE">
+      <column name="Annee_Academique" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Is_Actif" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <primary-key name="PRIMARY" columns="Annee_Academique"/>
+      <exported-key name="etudiant_niveau_ibfk_2" table="etudiant_niveau" schema="" catalog="schoolGestion" columns="Annee_Academique"/>
+      <exported-key name="matiere_enseigne_ibfk_3" table="matiere_enseigne" schema="" catalog="schoolGestion" columns="Annee_Academique"/>
+      <index name="Annee_Academique" unique="false" columns="Annee_Academique"/>
+    </table>
+    <table name="domaine" schema="" catalog="schoolGestion" type="TABLE">
+      <column name="Code_Domaine" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Libelle_Domaine" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="Code_Domaine"/>
+      <exported-key name="mention_ibfk_1" table="mention" schema="" catalog="schoolGestion" columns="Code_Domaine"/>
+    </table>
+    <table name="etudiant" schema="" catalog="schoolGestion" type="TABLE">
+      <column name="Code_Etudiant" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Nom" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Prenom" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Sexe" sqlType="VARCHAR" precision="25" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Date_Naiss" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Email" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="vacation" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="classe" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="domaine" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="annee_academique" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="Code_Etudiant"/>
+    </table>
+    <table name="etudiant_niveau" schema="" catalog="schoolGestion" type="TABLE">
+      <column name="Code_Etudiant" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Annee_Academique" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Code_Mention" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Code_Niveau" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Vacation_Code" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="Code_Etudiant,Annee_Academique,Code_Mention,Code_Niveau,Vacation_Code"/>
+      <foreign-key name="etudiant_niveau_ibfk_1" columns="Vacation_Code" ref-table="vacation" ref-schema="" ref-catalog="schoolGestion" ref-columns="Vacation_Code" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="etudiant_niveau_ibfk_2" columns="Annee_Academique" ref-table="annee_academique" ref-schema="" ref-catalog="schoolGestion" ref-columns="Annee_Academique" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="note_etudiant_ibfk_2" table="note_etudiant" schema="" catalog="schoolGestion" columns="Code_Etudiant"/>
+      <exported-key name="note_etudiant_ibfk_3" table="note_etudiant" schema="" catalog="schoolGestion" columns="Vacation_Code"/>
+      <exported-key name="note_etudiant_ibfk_4" table="note_etudiant" schema="" catalog="schoolGestion" columns="Code_Mention,Code_Niveau"/>
+      <index name="Code_Mention" unique="false" columns="Code_Mention"/>
+      <index name="Code_Mention_2" unique="false" columns="Code_Mention,Code_Niveau"/>
+      <index name="Code_Niveau" unique="false" columns="Code_Niveau"/>
+    </table>
+    <table name="etudiant_note" schema="" catalog="schoolGestion" type="TABLE">
+      <column name="matiere" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="note" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="id_etudiant" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="matiere" schema="" catalog="schoolGestion" type="TABLE">
+      <column name="Matiere_Code" sqlType="MEDIUMINT" precision="7" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Matiere_Name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="domaine" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="Matiere_Code"/>
+    </table>
+    <table name="matiere_enseigne" schema="" catalog="schoolGestion" type="TABLE">
+      <column name="Code_Mention" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Code_Niveau" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Annee_Academique" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Code_Semestre" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Matiere_Code" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Coefficient" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="Code_Mention,Code_Niveau,Annee_Academique,Code_Semestre,Matiere_Code"/>
+      <foreign-key name="matiere_enseigne_ibfk_2" columns="Code_Semestre" ref-table="semestre" ref-schema="" ref-catalog="schoolGestion" ref-columns="Code_Semestre" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="matiere_enseigne_ibfk_3" columns="Annee_Academique" ref-table="annee_academique" ref-schema="" ref-catalog="schoolGestion" ref-columns="Annee_Academique" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="matiere_enseigne_ibfk_4" columns="Code_Mention,Code_Niveau" ref-table="mention_niveau" ref-schema="" ref-catalog="schoolGestion" ref-columns="Code_Mention,Code_Niveau" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="note_etudiant_ibfk_1" table="note_etudiant" schema="" catalog="schoolGestion" columns="Code_Mention,Code_Niveau,Annee_Academique,Code_Semestre,Matiere_Code"/>
+      <index name="Code_Mention" unique="false" columns="Code_Mention"/>
+      <index name="Code_Niveau" unique="false" columns="Code_Niveau"/>
+      <index name="Matiere_Code" unique="false" columns="Matiere_Code"/>
+    </table>
+    <table name="mention" schema="" catalog="schoolGestion" type="TABLE">
+      <column name="Code_Mention" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Code_Domaine" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Libelle_Mention" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="Code_Mention"/>
+      <foreign-key name="mention_ibfk_1" columns="Code_Domaine" ref-table="domaine" ref-schema="" ref-catalog="schoolGestion" ref-columns="Code_Domaine" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="mention_niveau_ibfk_2" table="mention_niveau" schema="" catalog="schoolGestion" columns="Code_Mention"/>
+      <index name="Code_Mention" unique="false" columns="Code_Mention"/>
+    </table>
+    <table name="mention_niveau" schema="" catalog="schoolGestion" type="TABLE">
+      <column name="Code_Mention" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Code_Niveau" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="Code_Mention,Code_Niveau"/>
+      <foreign-key name="mention_niveau_ibfk_1" columns="Code_Niveau" ref-table="niveau" ref-schema="" ref-catalog="schoolGestion" ref-columns="Code_Niveau" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="mention_niveau_ibfk_2" columns="Code_Mention" ref-table="mention" ref-schema="" ref-catalog="schoolGestion" ref-columns="Code_Mention" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="matiere_enseigne_ibfk_4" table="matiere_enseigne" schema="" catalog="schoolGestion" columns="Code_Mention,Code_Niveau"/>
+    </table>
+    <table name="niveau" schema="" catalog="schoolGestion" type="TABLE">
+      <column name="Code_Niveau" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Libelle_Niveau" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="Code_Niveau"/>
+      <exported-key name="mention_niveau_ibfk_1" table="mention_niveau" schema="" catalog="schoolGestion" columns="Code_Niveau"/>
+      <index name="Code_Niveau" unique="false" columns="Code_Niveau"/>
+    </table>
+    <table name="note_etudiant" schema="" catalog="schoolGestion" type="TABLE">
+      <column name="Code_Mention" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Code_Niveau" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Annee_Academique" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Code_Semestre" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Matiere_Code" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Code_Etudiant" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Intra" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="Final" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="Note_Finale" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="Vacation_Code" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="Code_Mention,Code_Niveau,Annee_Academique,Code_Semestre,Matiere_Code,Code_Etudiant,Vacation_Code"/>
+      <foreign-key name="note_etudiant_ibfk_1" columns="Code_Mention,Code_Niveau,Annee_Academique,Code_Semestre,Matiere_Code" ref-table="matiere_enseigne" ref-schema="" ref-catalog="schoolGestion" ref-columns="Code_Mention,Code_Niveau,Annee_Academique,Code_Semestre,Matiere_Code" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="note_etudiant_ibfk_2" columns="Code_Etudiant" ref-table="etudiant_niveau" ref-schema="" ref-catalog="schoolGestion" ref-columns="Code_Etudiant" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="note_etudiant_ibfk_3" columns="Vacation_Code" ref-table="etudiant_niveau" ref-schema="" ref-catalog="schoolGestion" ref-columns="Vacation_Code" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="note_etudiant_ibfk_4" columns="Code_Mention,Code_Niveau" ref-table="etudiant_niveau" ref-schema="" ref-catalog="schoolGestion" ref-columns="Code_Mention,Code_Niveau" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="Annee_Academique" unique="false" columns="Annee_Academique"/>
+      <index name="Code_Mention" unique="false" columns="Code_Mention"/>
+      <index name="Code_Niveau" unique="false" columns="Code_Niveau"/>
+      <index name="Code_Semestre" unique="false" columns="Code_Semestre"/>
+      <index name="Matiere_Code" unique="false" columns="Matiere_Code"/>
+    </table>
+    <table name="semestre" schema="" catalog="schoolGestion" type="TABLE">
+      <column name="Code_Semestre" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Semestre_Libelle" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="Code_Semestre"/>
+      <exported-key name="matiere_enseigne_ibfk_2" table="matiere_enseigne" schema="" catalog="schoolGestion" columns="Code_Semestre"/>
+    </table>
+    <table name="vacation" schema="" catalog="schoolGestion" type="TABLE">
+      <column name="Vacation_Code" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Vacation_Libelle" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="Vacation_Code"/>
+      <exported-key name="etudiant_niveau_ibfk_1" table="etudiant_niveau" schema="" catalog="schoolGestion" columns="Vacation_Code"/>
+    </table>
+  </data-source>
+</component>

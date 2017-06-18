@@ -15,7 +15,7 @@ class Database
         if ($this->bdd == null) {
             // Création de la connexion
             try {
-                $this->bdd = new PDO('mysql:host=localhost;dbname=schoolGestion', 'root', '');
+                $this->bdd = new PDO('mysql:host=localhost;dbname=schoolGestion', 'root', 'secret');
                 $this->bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
                 $this->bdd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
                 // echo 'Connexion reussie';
